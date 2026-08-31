@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Kordiva</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background: #f8f1e7;
+
+            font-family: Arial, sans-serif;
+
+            color: #432719;
+        }
+
+        .login-box {
+
+            width: 430px;
+
+            max-width: 92%;
+
+            padding: 45px 40px;
+
+            background: #fffaf3;
+
+            border: 1px solid #dfcbb5;
+
+            box-shadow:
+                0 20px 60px rgba(67, 39, 25, 0.12);
+        }
+
+        .brand {
+
+            text-align: center;
+
+            font-family: Georgia, serif;
+
+            font-size: 30px;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+
+            text-align: center;
+
+            font-family: Georgia, serif;
+
+            font-size: 22px;
+
+            color: #71472f;
+
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-size: 13px;
+
+            color: #594536;
+        }
+
+        .form-group input {
+
+            width: 100%;
+
+            padding: 13px 14px;
+
+            border: 1px solid #d8c1a8;
+
+            background: #fffdf9;
+
+            outline: none;
+
+            font-size: 14px;
+        }
+
+        .form-group input:focus {
+
+            border-color: #9b6d49;
+
+            box-shadow:
+                0 0 0 3px rgba(155, 109, 73, 0.10);
+        }
+
+        .errorlist {
+
+            padding: 0;
+
+            list-style: none;
+
+            color: #9b4b3e;
+
+            font-size: 12px;
+        }
+
+        .login-btn {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            background: #432719;
+
+            color: #fffaf3;
+
+            cursor: pointer;
+
+            letter-spacing: 2px;
+
+            font-size: 13px;
+
+            transition:
+                background 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .login-btn:hover {
+
+            background: #71472f;
+
+            transform: translateY(-2px);
+        }
+
+        .signup-link {
+
+            margin-top: 22px;
+
+            text-align: center;
+
+            font-size: 13px;
+
+            color: #6b5140;
+        }
+
+        .signup-link a {
+
+            color: #8a5d3c;
+
+            font-weight: 600;
+
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <div class="brand">
+        KORDIVA
+    </div>
+
+    <div class="subtitle">
+        Welcome Back
+    </div>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        {{ form.non_field_errors }}
+
+        <div class="form-group">
+
+            <label for="{{ form.username.id_for_label }}">
+                Username
+            </label>
+
+            {{ form.username }}
+
+            {{ form.username.errors }}
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="{{ form.password.id_for_label }}">
+                Password
+            </label>
+
+            {{ form.password }}
+
+            {{ form.password.errors }}
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="login-btn">
+
+            LOGIN
+
+        </button>
+
+    </form>
+
+
+    <div class="signup-link">
+
+        Don't have an account?
+
+        <a href="{% url 'signup' %}">
+            Create Account
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

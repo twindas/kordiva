@@ -1,0 +1,2133 @@
+/* =========================================================
+   KORDIVA — ABOUT PAGE
+========================================================= */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background: #f4eee5;
+
+    color: #3d261b;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    overflow-x: hidden;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.about-navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+        rgba(244, 238, 229, 0.92);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom:
+        1px solid rgba(61, 38, 27, 0.12);
+
+}
+
+
+.about-nav-inner {
+
+    width: 90%;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* LOGO */
+
+.kordiva-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.logo-symbol {
+
+    width: 34px;
+    height: 34px;
+
+    border:
+        1px solid #6e432d;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+
+}
+
+
+.logo-text {
+
+    font-size: 23px;
+
+    letter-spacing: 0.04em;
+
+}
+
+
+/* NAV LINKS */
+
+.about-nav-links {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+
+.about-nav-links a {
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.15em;
+
+    position: relative;
+
+}
+
+
+.about-nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: #8b5438;
+
+    transition: width 0.3s ease;
+
+}
+
+
+.about-nav-links a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* CART */
+
+.about-cart {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.12em;
+
+}
+
+
+.cart-count {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: #3d261b;
+
+    color: #f4eee5;
+
+    margin-left: 5px;
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.about-hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding:
+        130px 7% 80px;
+
+    background:
+        #3d261b;
+
+    color: #f4eee5;
+
+    overflow: hidden;
+
+}
+
+
+.about-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    border:
+        1px solid rgba(244, 238, 229, 0.16);
+
+    border-radius: 50%;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+
+
+.about-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border:
+        1px solid rgba(244, 238, 229, 0.1);
+
+    border-radius: 50%;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+}
+
+
+.hero-small {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.35em;
+
+    margin-bottom: 30px;
+
+    opacity: 0.7;
+
+}
+
+
+.hero-content h1 {
+
+    font-size:
+        clamp(55px, 8vw, 120px);
+
+    line-height: 0.92;
+
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
+
+}
+
+
+.hero-content h1 span {
+
+    display: block;
+
+    font-style: italic;
+
+    color: #c99b75;
+
+}
+
+
+.hero-description {
+
+    max-width: 570px;
+
+    margin: 45px auto 35px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    opacity: 0.78;
+
+}
+
+
+.hero-scroll {
+
+    display: inline-flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-family: Arial, sans-serif;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.15em;
+
+    font-size: 9px;
+
+}
+
+
+.scroll-arrow {
+
+    font-size: 22px;
+
+    animation:
+        scrollMove 1.6s infinite ease-in-out;
+
+}
+
+
+@keyframes scrollMove {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+}
+
+
+.hero-bottom-text {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 5%;
+
+    right: 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 0.2em;
+
+    opacity: 0.5;
+
+}
+
+
+.hero-decoration {
+
+    position: absolute;
+
+    font-size: 100px;
+
+    opacity: 0.08;
+
+}
+
+
+.hero-decoration-one {
+
+    right: 8%;
+
+    top: 25%;
+
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.story-section {
+
+    padding:
+        150px 8%;
+
+    position: relative;
+
+}
+
+
+.section-number {
+
+    position: absolute;
+
+    top: 70px;
+    right: 8%;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 0.2em;
+
+    color: #a27a61;
+
+}
+
+
+.story-layout {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 100px;
+
+    align-items: start;
+
+}
+
+
+.story-heading h2 {
+
+    font-size:
+        clamp(48px, 6vw, 85px);
+
+    line-height: 0.98;
+
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
+
+}
+
+
+.story-heading h2 em {
+
+    color: #9a6044;
+
+    font-weight: 400;
+
+}
+
+
+.story-text {
+
+    padding-top: 30px;
+
+}
+
+
+.story-text p {
+
+    font-size: 17px;
+
+    line-height: 1.85;
+
+    margin-bottom: 25px;
+
+    color: #674b3d;
+
+}
+
+
+.story-signature {
+
+    margin-top: 45px;
+
+    display: flex;
+
+    gap: 35px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.18em;
+
+}
+
+
+.story-signature span {
+
+    padding-bottom: 8px;
+
+    border-bottom:
+        1px solid #a27a61;
+
+}
+
+
+/* =========================================================
+   KORDIVA — PURPOSE SECTION
+========================================================= */
+
+.purpose-section {
+
+    width: 100%;
+
+    padding: 95px 6% 105px;
+
+    background: #e8d8c6;
+
+    color: #42271b;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.purpose-heading {
+
+    max-width: 1050px;
+
+    margin: 0 auto 65px;
+
+    text-align: left;
+}
+
+
+/* Small label */
+
+.purpose-eyebrow {
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 0.28em;
+
+    color: #9b5b3d;
+
+    text-transform: uppercase;
+}
+
+
+/* Main heading */
+
+.purpose-heading h2 {
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(52px, 7vw, 92px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.045em;
+
+    color: #40251a;
+}
+
+
+/* Italic second line */
+
+.purpose-heading h2 em {
+
+    display: block;
+
+    margin-left: 70px;
+
+    color: #9b5b3d;
+
+    font-weight: 400;
+}
+
+
+/* Description */
+
+.purpose-heading p {
+
+    max-width: 520px;
+
+    margin: 30px 0 0 75px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #705343;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.purpose-cards {
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   INDIVIDUAL CARD
+========================================================= */
+
+.purpose-card {
+
+    min-height: 310px;
+
+    padding: 25px 27px 28px;
+
+    background: #f7f0e7;
+
+    border: 1px solid
+        rgba(74, 43, 29, 0.12);
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+
+/* =========================================================
+   TOP AREA
+========================================================= */
+
+.purpose-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.purpose-number {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.25em;
+
+    color: #a06445;
+}
+
+
+.purpose-symbol {
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #b77b5b;
+
+    border-radius: 50%;
+
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+
+    color: #9b5b3d;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.purpose-content {
+
+    margin-top: 45px;
+}
+
+
+.purpose-content h3 {
+
+    margin: 0 0 14px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 29px;
+
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    color: #40251a;
+}
+
+
+.purpose-content p {
+
+    max-width: 330px;
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
+    color: #705343;
+}
+
+
+/* =========================================================
+   BOTTOM DECORATIVE LINE
+========================================================= */
+
+.purpose-line {
+
+    width: 45px;
+
+    height: 1px;
+
+    margin-top: 25px;
+
+    background: #a06445;
+
+    opacity: 0.65;
+
+    transition:
+        width 0.35s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.purpose-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        10px 12px 0 rgba(66, 39, 27, 0.12);
+
+    background: #faf5ed;
+}
+
+
+.purpose-card:hover .purpose-line {
+
+    width: 80px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .purpose-section {
+
+        padding: 75px 5% 85px;
+    }
+
+
+    .purpose-heading {
+
+        margin-bottom: 50px;
+    }
+
+
+    .purpose-heading h2 {
+
+        font-size: 64px;
+    }
+
+
+    .purpose-heading h2 em {
+
+        margin-left: 40px;
+    }
+
+
+    .purpose-heading p {
+
+        margin-left: 45px;
+    }
+
+
+    .purpose-cards {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .purpose-card:last-child {
+
+        grid-column: 1 / -1;
+
+        max-width: 50%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .purpose-section {
+
+        padding: 65px 22px 75px;
+    }
+
+
+    .purpose-heading {
+
+        margin-bottom: 40px;
+    }
+
+
+    .purpose-heading h2 {
+
+        font-size: 48px;
+
+        line-height: 0.98;
+    }
+
+
+    .purpose-heading h2 em {
+
+        margin-left: 25px;
+    }
+
+
+    .purpose-heading p {
+
+        margin: 25px 0 0 25px;
+
+        font-size: 13px;
+    }
+
+
+    .purpose-cards {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .purpose-card {
+
+        min-height: 260px;
+
+        padding: 22px;
+    }
+
+
+    .purpose-card:last-child {
+
+        grid-column: auto;
+
+        max-width: none;
+    }
+
+
+    .purpose-content {
+
+        margin-top: 35px;
+    }
+
+
+    .purpose-content h3 {
+
+        font-size: 27px;
+    }
+
+}
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.journey-section {
+
+    padding:
+        160px 8%;
+
+    background: #f4eee5;
+
+}
+
+
+.journey-header {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 80px;
+
+}
+
+
+.journey-header h2 {
+
+    font-size:
+        clamp(50px, 6vw, 85px);
+
+    line-height: 0.95;
+
+    font-weight: 400;
+
+}
+
+
+.journey-header h2 em {
+
+    color: #8d573d;
+
+}
+
+
+.journey-intro {
+
+    padding-top: 40px;
+
+    max-width: 400px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #735747;
+
+}
+
+
+/* =========================================================
+   KORDIVA — OUR STORY TIMELINE
+========================================================= */
+
+.timeline {
+    width: 100%;
+    max-width: 1050px;
+    margin: 80px auto 120px;
+    padding: 0 40px;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   TIMELINE ITEM
+========================================================= */
+
+.timeline-item {
+    position: relative;
+
+    min-height: 330px;
+
+    display: flex;
+    align-items: flex-start;
+
+    margin-bottom: 40px;
+
+    opacity: 0;
+    transform: translateY(60px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+/* Scroll animation */
+
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   NUMBER CIRCLE
+========================================================= */
+
+.timeline-date {
+
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    transform: translateX(-50%);
+
+    width: 76px;
+    height: 76px;
+
+    border-radius: 50%;
+
+    background: #4a2b1d;
+
+    color: #f7efe4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    letter-spacing: 0.08em;
+
+    z-index: 5;
+
+    border: 1px solid #c9a889;
+
+    box-shadow:
+        0 8px 20px rgba(60, 35, 22, 0.12);
+}
+
+
+/* =========================================================
+   VERTICAL LINE
+========================================================= */
+
+.timeline-line {
+
+    position: absolute;
+
+    left: 50%;
+    top: 76px;
+
+    transform: translateX(-50%);
+
+    width: 1px;
+
+    height: calc(100% + 40px);
+
+    background: #b99a7d;
+
+    opacity: 0.65;
+
+    z-index: 1;
+}
+
+
+/* Last item's line stops */
+
+.timeline-item:last-child .timeline-line {
+    display: none;
+}
+
+
+/* =========================================================
+   CONTENT BOX
+========================================================= */
+
+.timeline-content {
+
+    width: 43%;
+
+    min-height: 220px;
+
+    margin-top: 35px;
+
+    padding: 38px 40px;
+
+    background: #4a2b1d;
+
+    color: #f7efe4;
+
+    border-radius: 3px;
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+        12px 12px 0 #2f1b12;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* =========================================================
+   ALTERNATING LEFT / RIGHT
+========================================================= */
+
+.timeline-item:nth-child(odd) {
+    justify-content: flex-start;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: 0;
+}
+
+
+.timeline-item:nth-child(even) {
+    justify-content: flex-end;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-right: 0;
+}
+
+
+/* =========================================================
+   SMALL LABEL
+========================================================= */
+
+.timeline-content span {
+
+    display: block;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.25em;
+
+    color: #d8b697;
+
+    margin-bottom: 18px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.timeline-content h3 {
+
+    margin: 0 0 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 34px;
+
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    color: #fff7ed;
+}
+
+
+/* =========================================================
+   PARAGRAPH
+========================================================= */
+
+.timeline-content p {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #eadbcf;
+}
+
+
+/* =========================================================
+   HOVER EFFECT
+========================================================= */
+
+.timeline-content:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        16px 16px 0 #2f1b12;
+}
+
+
+/* =========================================================
+   LITTLE CONNECTOR FROM BOX TO LINE
+========================================================= */
+
+.timeline-item:nth-child(odd) .timeline-content::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 42px;
+    right: -50px;
+
+    width: 50px;
+    height: 1px;
+
+    background: #b99a7d;
+
+    opacity: 0.7;
+}
+
+
+.timeline-item:nth-child(even) .timeline-content::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 42px;
+    left: -50px;
+
+    width: 50px;
+    height: 1px;
+
+    background: #b99a7d;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .timeline {
+        padding: 0 25px;
+    }
+
+    .timeline-content {
+        width: 40%;
+
+        padding: 30px;
+    }
+
+    .timeline-content h3 {
+        font-size: 28px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .timeline {
+        margin-top: 60px;
+        padding: 0 20px;
+    }
+
+
+    .timeline-item {
+
+        min-height: auto;
+
+        padding-left: 55px;
+
+        margin-bottom: 70px;
+
+        display: block;
+    }
+
+
+    .timeline-date {
+
+        left: 18px;
+        transform: translateX(-50%);
+
+        width: 55px;
+        height: 55px;
+
+        font-size: 13px;
+    }
+
+
+    .timeline-line {
+
+        left: 18px;
+
+        top: 55px;
+
+        height: calc(100% + 70px);
+    }
+
+
+    .timeline-content {
+
+        width: 100%;
+
+        margin: 35px 0 0 !important;
+
+        padding: 28px 25px;
+
+        box-shadow:
+            8px 8px 0 #2f1b12;
+    }
+
+
+    .timeline-content h3 {
+        font-size: 27px;
+    }
+
+
+    .timeline-content p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+
+    .timeline-item:nth-child(odd) .timeline-content::after,
+    .timeline-item:nth-child(even) .timeline-content::after {
+
+        display: none;
+    }
+
+}
+
+
+
+
+/* =========================================================
+   FOUNDER
+========================================================= */
+
+.founder-section {
+
+    min-height: 700px;
+
+    padding:
+        130px 8%;
+
+    background: #3d261b;
+
+    color: #f4eee5;
+
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap: 100px;
+
+    align-items: center;
+
+}
+
+
+.founder-mark {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.founder-circle {
+
+    width: 280px;
+    height: 280px;
+
+    border:
+        1px solid #b99072;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+}
+
+
+.founder-circle::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 18px;
+
+    border:
+        1px solid rgba(201,155,117,0.45);
+
+    border-radius: 50%;
+
+}
+
+
+.founder-circle span {
+
+    font-size: 100px;
+
+    font-style: italic;
+
+    color: #c99b75;
+
+}
+
+
+.founder-content {
+
+    max-width: 650px;
+
+}
+
+
+.founder-content .eyebrow {
+
+    color: #c99b75;
+
+}
+
+
+.founder-content h2 {
+
+    font-size:
+        clamp(55px, 7vw, 100px);
+
+    line-height: 0.9;
+
+    font-weight: 400;
+
+}
+
+
+.founder-content h2 em {
+
+    color: #c99b75;
+
+}
+
+
+.founder-name {
+
+    margin-top: 55px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid rgba(244,238,229,0.2);
+
+}
+
+
+.founder-name span {
+
+    display: block;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 0.25em;
+
+    opacity: 0.5;
+
+}
+
+
+.founder-name strong {
+
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 28px;
+
+    font-weight: 400;
+
+}
+
+
+.founder-description {
+
+    margin-top: 35px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #dbcabd;
+
+}
+
+
+/* =========================================================
+   WHY KORDIVA
+========================================================= */
+
+.why-section {
+
+    padding:
+        150px 8%;
+
+}
+
+
+.why-heading {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+.why-heading h2 {
+
+    font-size:
+        clamp(50px, 6vw, 85px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+}
+
+
+.why-heading h2 em {
+
+    color: #8e5439;
+
+}
+
+
+.why-list {
+
+    max-width: 1200px;
+
+    margin: 90px auto 0;
+
+}
+
+
+.why-item {
+
+    display: grid;
+
+    grid-template-columns:
+        80px 1fr 1.2fr;
+
+    gap: 30px;
+
+    align-items: center;
+
+    padding: 32px 0;
+
+    border-top:
+        1px solid rgba(61,38,27,0.2);
+
+}
+
+
+.why-item:last-child {
+
+    border-bottom:
+        1px solid rgba(61,38,27,0.2);
+
+}
+
+
+.why-item > span {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    color: #a16e53;
+
+}
+
+
+.why-item h3 {
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+}
+
+
+.why-item p {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #725849;
+
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.about-cta {
+
+    min-height: 650px;
+
+    background: #d8c4b0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 7%;
+
+}
+
+
+.cta-logo {
+
+    width: 70px;
+    height: 70px;
+
+    border:
+        1px solid #6e432d;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.cta-logo span {
+
+    font-size: 32px;
+
+    font-style: italic;
+
+}
+
+
+.about-cta h2 {
+
+    font-size:
+        clamp(50px, 7vw, 100px);
+
+    font-weight: 400;
+
+    line-height: 0.92;
+
+}
+
+
+.about-cta h2 em {
+
+    color: #805039;
+
+}
+
+
+.about-cta > p:not(.eyebrow) {
+
+    max-width: 500px;
+
+    margin: 30px auto;
+
+    line-height: 1.7;
+
+    color: #694c3c;
+
+}
+
+
+.cta-button {
+
+    margin-top: 25px;
+
+    padding: 17px 30px;
+
+    background: #3d261b;
+
+    color: #f4eee5;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    display: inline-flex;
+
+    gap: 25px;
+
+    align-items: center;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.cta-button:hover {
+
+    transform: translateY(-4px);
+
+    background: #5a3828;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.about-footer {
+
+    background: #24160f;
+
+    color: #f4eee5;
+
+    padding:
+        60px 8% 30px;
+
+    text-align: center;
+
+}
+
+
+.footer-logo {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 24px;
+
+}
+
+
+.about-footer > p {
+
+    margin-top: 12px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.2em;
+
+    opacity: 0.5;
+
+}
+
+
+.footer-links {
+
+    margin: 40px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+}
+
+
+.footer-links a {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.15em;
+
+    opacity: 0.7;
+
+}
+
+
+.footer-copy {
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.1);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    opacity: 0.45;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+
+    .about-nav-links {
+
+        display: none;
+
+    }
+
+
+    .about-nav-inner {
+
+        min-height: 65px;
+
+    }
+
+
+    .story-layout,
+    .journey-header,
+    .founder-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .belief-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .belief-card {
+
+        min-height: 300px;
+
+    }
+
+
+    .founder-section {
+
+        text-align: center;
+
+    }
+
+
+    .founder-mark {
+
+        order: 2;
+
+    }
+
+
+    .founder-content {
+
+        order: 1;
+
+        margin: auto;
+
+    }
+
+
+    .founder-circle {
+
+        width: 210px;
+        height: 210px;
+
+    }
+
+
+    .founder-circle span {
+
+        font-size: 75px;
+
+    }
+
+
+    .why-item {
+
+        grid-template-columns:
+            50px 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .why-item p {
+
+        grid-column: 2;
+
+    }
+
+
+    .timeline::before {
+
+        left: 35px;
+
+    }
+
+
+    .timeline-item {
+
+        grid-template-columns:
+            70px 1fr;
+
+    }
+
+
+    .timeline-date {
+
+        width: 55px;
+        height: 55px;
+
+    }
+
+
+    .timeline-content {
+
+        padding-left: 30px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+
+    .about-hero {
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 52px;
+
+    }
+
+
+    .story-section,
+    .philosophy-section,
+    .journey-section,
+    .why-section {
+
+        padding:
+            100px 6%;
+
+    }
+
+
+    .timeline {
+
+        margin-top: 70px;
+
+    }
+
+
+    .timeline-content h3 {
+
+        font-size: 30px;
+
+    }
+
+
+    .hero-bottom-text {
+
+        font-size: 7px;
+
+    }
+
+
+    .footer-links {
+
+        flex-wrap: wrap;
+
+    }
+
+}

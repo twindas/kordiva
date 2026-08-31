@@ -1,0 +1,1983 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Kordiva | Rope & Home Decor</title>
+
+    <link rel="stylesheet"
+          href="{% static 'products/style.css' %}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Allura&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+
+        <!-- LEFT NAVIGATION -->
+
+        <nav class="main-nav">
+
+            <a href="#"
+               class="nav-link active">
+                HOME
+            </a>
+
+            <a href="#shop-category"
+               class="nav-link">
+                SHOP
+            </a>
+
+            <a href="{% url 'about' %}"
+               class="nav-link">
+                ABOUT US
+            </a>
+
+            <a href="#speciality"
+               class="nav-link">
+                SPECIALITY
+            </a>
+
+            <a href="{% url 'contact' %}"
+               class="nav-link">
+                CONTACT US
+            </a>
+
+        </nav>
+
+
+
+        <!-- LOGO -->
+
+        <a href="{% url 'home' %}"
+           class="brand-logo">
+
+            <div class="logo-circle">
+                <span>K</span>
+            </div>
+
+            <div class="brand-name">
+                Kordiva
+            </div>
+
+            <div class="brand-tagline">
+                ROPE & HOME DECOR
+            </div>
+
+        </a>
+
+
+
+        <!-- RIGHT ICONS -->
+
+        <div class="header-actions">
+
+
+            <!-- ACCOUNT -->
+
+            <a href="{% url 'account' %}"
+               class="icon-button"
+               aria-label="Account">
+
+                <svg viewBox="0 0 24 24">
+
+                    <circle
+                        cx="12"
+                        cy="8"
+                        r="3.5">
+                    </circle>
+
+                    <path
+                        d="M5.5 20c.8-4 3-6 6.5-6s5.7 2 6.5 6">
+                    </path>
+
+                </svg>
+
+            </a>
+
+
+
+            <!-- CART -->
+
+            <a href="{% url 'cart' %}"
+               class="icon-button cart-button"
+               aria-label="Cart">
+
+                <svg viewBox="0 0 24 24">
+
+                    <path
+                        d="M6 8h12l-1 12H7L6 8Z">
+                    </path>
+
+                    <path
+                        d="M9 8a3 3 0 0 1 6 0">
+                    </path>
+
+                </svg>
+
+                <span class="cart-count">
+                    0
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO SECTION
+========================================================= -->
+
+<section class="kordiva-hero">
+
+
+    <!-- Decorative glow -->
+
+    <div class="hero-glow hero-glow-one"></div>
+    <div class="hero-glow hero-glow-two"></div>
+
+
+    <!-- HERO SLIDES -->
+
+    <div class="hero-slides">
+
+
+        <!-- =================================================
+             SLIDE 01
+        ================================================== -->
+
+        <div class="kordiva-slide active">
+
+            <img
+                src="{% static 'products/images/hero-1.jpg' %}"
+                alt="Kordiva Handmade Rope Decor">
+
+            <div class="hero-image-overlay"></div>
+
+
+            <div class="hero-slide-content">
+
+                <span class="hero-eyebrow">
+                    K O R D I V A
+                </span>
+
+                <div class="hero-star">
+                    ✦
+                </div>
+
+                <h1>
+                    Made to
+                    <span>hang.</span>
+                </h1>
+
+                <p>
+                    Handmade rope pieces
+                    created to bring warmth,
+                    texture and character
+                    into your everyday space.
+                </p>
+
+                <a href="#shop-category"
+                   class="hero-button">
+
+                    EXPLORE COLLECTION
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SLIDE 02
+        ================================================== -->
+
+        <div class="kordiva-slide">
+
+            <img
+                src="{% static 'products/images/hero-2.jpg' %}"
+                alt="Kordiva Handmade Home Decor">
+
+            <div class="hero-image-overlay"></div>
+
+
+            <div class="hero-slide-content">
+
+                <span class="hero-eyebrow">
+                    H A N D M A D E
+                </span>
+
+                <div class="hero-star">
+                    ✦
+                </div>
+
+                <h1>
+                    Made to
+                    <span>belong.</span>
+                </h1>
+
+                <p>
+                    Thoughtfully crafted décor
+                    that turns simple corners
+                    into warm and beautiful
+                    places to live.
+                </p>
+
+                <a href="#shop-category"
+                   class="hero-button">
+
+                    DISCOVER KORDIVA
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SLIDE 03
+        ================================================== -->
+
+        <div class="kordiva-slide">
+
+            <img
+                src="{% static 'products/images/hero-3.jpg' %}"
+                alt="Kordiva Rope Collection">
+
+            <div class="hero-image-overlay"></div>
+
+
+            <div class="hero-slide-content">
+
+                <span class="hero-eyebrow">
+                    R O P E • H O M E • L I F E
+                </span>
+
+                <div class="hero-star">
+                    ✦
+                </div>
+
+                <h1>
+                    Crafted with
+                    <span>care.</span>
+                </h1>
+
+                <p>
+                    Natural textures,
+                    timeless designs and
+                    handmade charm —
+                    made especially for you.
+                </p>
+
+                <a href="#speciality"
+                   class="hero-button">
+
+                    WHY KORDIVA
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SLIDE 04
+        ================================================== -->
+
+        <div class="kordiva-slide">
+
+            <img
+                src="{% static 'products/images/hero-4.jpg' %}"
+                alt="Kordiva Rope Home Collection">
+
+            <div class="hero-image-overlay"></div>
+
+
+            <div class="hero-slide-content">
+
+                <span class="hero-eyebrow">
+                    L I V E • B E A U T I F U L L Y
+                </span>
+
+                <div class="hero-star">
+                    ✦
+                </div>
+
+                <h1>
+                    Decor
+                    <span>joyfully.</span>
+                </h1>
+
+                <p>
+                    Beautiful rope décor
+                    for homes that feel
+                    personal, peaceful
+                    and truly yours.
+                </p>
+
+                <a href="#shop-category"
+                   class="hero-button">
+
+                    SHOP THE COLLECTION
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         HERO SIDE LABEL
+    ================================================== -->
+
+    <div class="hero-side-label">
+
+        <span>
+            ROPE & HOME DECOR
+        </span>
+
+    </div>
+
+
+
+    <!-- =================================================
+         SLIDER CONTROLS
+    ================================================== -->
+
+    <div class="hero-controls">
+
+
+        <button
+            class="hero-arrow hero-prev"
+            aria-label="Previous slide">
+
+            ←
+
+        </button>
+
+
+        <div class="hero-dots">
+
+            <button
+                class="hero-dot active"
+                data-slide="0">
+            </button>
+
+            <button
+                class="hero-dot"
+                data-slide="1">
+            </button>
+
+            <button
+                class="hero-dot"
+                data-slide="2">
+            </button>
+
+            <button
+                class="hero-dot"
+                data-slide="3">
+            </button>
+
+        </div>
+
+
+        <button
+            class="hero-arrow hero-next"
+            aria-label="Next slide">
+
+            →
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- Bottom text -->
+
+    <div class="hero-bottom-text">
+
+        <span>
+            01
+        </span>
+
+        <div></div>
+
+        <span>
+            HANDCRAFTED FOR YOUR HOME
+        </span>
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     KORDIVA — SHOP BY CATEGORY
+========================================================= -->
+
+<section class="category-section" id="shop-category">
+
+    <!-- Decorative Background -->
+
+    <div class="category-bg-orb orb-left"></div>
+
+    <div class="category-bg-orb orb-right"></div>
+
+
+    <div class="category-inner">
+
+
+        <!-- =================================================
+             SECTION HEADER
+        ================================================== -->
+
+        <div class="category-heading">
+
+            <div class="category-kicker">
+
+                <span></span>
+
+                EXPLORE KORDIVA
+
+                <span></span>
+
+            </div>
+
+
+            <h2>
+
+                Shop by
+
+                <em>Category</em>
+
+            </h2>
+
+
+            <p>
+
+                Discover handmade pieces designed to bring
+                warmth, texture and character into your home.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             DECORATIVE DIVIDER
+        ================================================== -->
+
+        <div class="category-divider">
+
+            <span></span>
+
+            <b>✦</b>
+
+            <span></span>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CATEGORY GRID
+        ================================================== -->
+
+        <div class="category-grid">
+
+
+            <!-- =================================================
+                 01 — WALL HANGING
+            ================================================== -->
+
+            <a
+                href="{% url 'product_type_products' 'wall-hanging' %}"
+                class="category-item"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="{% static 'products/images/wall-hanging.jpg' %}"
+                        alt="Wall Hanging"
+                    >
+
+
+                    <div class="category-image-shade"></div>
+
+
+                    <div class="category-hover">
+
+                        <span>
+                            EXPLORE
+                        </span>
+
+                        <strong>
+                            →
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-info">
+
+                    <span class="category-number">
+                        01
+                    </span>
+
+
+                    <h3>
+                        WALL HANGING
+                    </h3>
+
+
+                    <p>
+                        Art for your walls
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 02 — DREAMCATCHER
+            ================================================== -->
+
+            <a
+                href="{% url 'product_type_products' 'dreamcatcher' %}"
+                class="category-item"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="{% static 'products/images/dreamcatcher.jpg' %}"
+                        alt="Dreamcatcher"
+                    >
+
+
+                    <div class="category-image-shade"></div>
+
+
+                    <div class="category-hover">
+
+                        <span>
+                            EXPLORE
+                        </span>
+
+                        <strong>
+                            →
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-info">
+
+                    <span class="category-number">
+                        02
+                    </span>
+
+
+                    <h3>
+                        DREAMCATCHER
+                    </h3>
+
+
+                    <p>
+                        Dream in beautiful details
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 03 — HANGING SHELF
+            ================================================== -->
+
+            <a
+                href="{% url 'product_type_products' 'hanging-shelf' %}"
+                class="category-item"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="{% static 'products/images/hanging-shelf.jpg' %}"
+                        alt="Hanging Shelf"
+                    >
+
+
+                    <div class="category-image-shade"></div>
+
+
+                    <div class="category-hover">
+
+                        <span>
+                            EXPLORE
+                        </span>
+
+                        <strong>
+                            →
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-info">
+
+                    <span class="category-number">
+                        03
+                    </span>
+
+
+                    <h3>
+                        HANGING SHELF
+                    </h3>
+
+
+                    <p>
+                        Simple. Useful. Beautiful.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 04 — PLANT HANGER
+            ================================================== -->
+
+            <a
+                href="{% url 'product_type_products' 'plant-hanger' %}"
+                class="category-item"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="{% static 'products/images/plant-hanger.jpg' %}"
+                        alt="Plant Hanger"
+                    >
+
+
+                    <div class="category-image-shade"></div>
+
+
+                    <div class="category-hover">
+
+                        <span>
+                            EXPLORE
+                        </span>
+
+                        <strong>
+                            →
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-info">
+
+                    <span class="category-number">
+                        04
+                    </span>
+
+
+                    <h3>
+                        PLANT HANGER
+                    </h3>
+
+
+                    <p>
+                        Let your greens hang
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 05 — ROPE MIRROR
+            ================================================== -->
+
+            <a
+                href="{% url 'product_type_products' 'rope-mirror' %}"
+                class="category-item"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="{% static 'products/images/mirror.jpg' %}"
+                        alt="Rope Mirror"
+                    >
+
+
+                    <div class="category-image-shade"></div>
+
+
+                    <div class="category-hover">
+
+                        <span>
+                            EXPLORE
+                        </span>
+
+                        <strong>
+                            →
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-info">
+
+                    <span class="category-number">
+                        05
+                    </span>
+
+
+                    <h3>
+                        ROPE MIRROR
+                    </h3>
+
+
+                    <p>
+                        Handmade wall accents
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 06 — PHOTO HOLDER
+            ================================================== -->
+
+            <a
+                href="{% url 'product_type_products' 'photo-holder' %}"
+                class="category-item"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="{% static 'products/images/photo-holder.jpg' %}"
+                        alt="Rope Photo Holder"
+                    >
+
+
+                    <div class="category-image-shade"></div>
+
+
+                    <div class="category-hover">
+
+                        <span>
+                            EXPLORE
+                        </span>
+
+                        <strong>
+                            →
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-info">
+
+                    <span class="category-number">
+                        06
+                    </span>
+
+
+                    <h3>
+                        PHOTO HOLDER
+                    </h3>
+
+
+                    <p>
+                        Memories, beautifully framed
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 07 — KEYCHAIN
+            ================================================== -->
+
+            <a
+                href="{% url 'product_type_products' 'keychain' %}"
+                class="category-item"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="{% static 'products/images/keychain.jpg' %}"
+                        alt="Rope Keychain"
+                    >
+
+
+                    <div class="category-image-shade"></div>
+
+
+                    <div class="category-hover">
+
+                        <span>
+                            EXPLORE
+                        </span>
+
+                        <strong>
+                            →
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-info">
+
+                    <span class="category-number">
+                        07
+                    </span>
+
+
+                    <h3>
+                        KEYCHAIN
+                    </h3>
+
+
+                    <p>
+                        Little details that matter
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 08 — HANGING BASKET
+            ================================================== -->
+
+            <a
+                href="{% url 'product_type_products' 'hanging-basket' %}"
+                class="category-item"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="{% static 'products/images/hanging-basket.jpg' %}"
+                        alt="Hanging Basket"
+                    >
+
+
+                    <div class="category-image-shade"></div>
+
+
+                    <div class="category-hover">
+
+                        <span>
+                            EXPLORE
+                        </span>
+
+                        <strong>
+                            →
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="category-info">
+
+                    <span class="category-number">
+                        08
+                    </span>
+
+
+                    <h3>
+                        PLANT HOLDER
+                    </h3>
+
+
+                    <p>
+                        Bring nature closer
+                    </p>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             BOTTOM MESSAGE
+        ================================================== -->
+
+        <div class="category-bottom">
+
+            <span class="bottom-line"></span>
+
+
+            <div>
+
+                <small>
+                    HANDMADE • NATURAL • TIMELESS
+                </small>
+
+
+                <p>
+
+                    Find something made
+
+                    <em>
+                        just for your space.
+                    </em>
+
+                </p>
+
+            </div>
+
+
+            <span class="bottom-line"></span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     KORDIVA — WHY KORDIVA / SPECIALITY
+========================================================= -->
+
+<section class="kordiva-speciality" id="speciality">
+
+    <!-- Decorative background lights -->
+    <div class="speciality-glow glow-left"></div>
+    <div class="speciality-glow glow-right"></div>
+
+    <div class="speciality-inner">
+
+
+        <!-- =================================================
+             SECTION INTRO
+        ================================================== -->
+
+        <div class="why-kordiva">
+
+            <div class="why-kordiva-label">
+
+                <span class="label-line"></span>
+
+                <span class="label-star">✦</span>
+
+                <span>WHY KORDIVA?</span>
+
+                <span class="label-star">✦</span>
+
+                <span class="label-line"></span>
+
+            </div>
+
+
+            <h2>
+                MADE WITH CARE,
+                <span>MADE FOR YOU</span>
+            </h2>
+
+
+            <p class="why-description">
+
+                Every piece is thoughtfully handcrafted to bring
+                beauty, comfort and convenience to your everyday life.
+
+            </p>
+
+
+            <div class="why-divider">
+
+                <span></span>
+
+                <b>✦</b>
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SPECIALITY CARDS
+        ================================================== -->
+
+        <div class="speciality-track">
+
+
+            <!-- 01 -->
+            <div class="speciality-card">
+
+                <div class="card-icon">
+                    ♧
+                </div>
+
+                <div class="card-number">
+                    01
+                </div>
+
+                <h3>
+                    Eco-Friendly
+                </h3>
+
+                <p>
+                    Made with natural cotton rope &
+                    sustainable materials.
+                </p>
+
+                <span class="card-bottom-line"></span>
+
+            </div>
+
+
+
+            <!-- 02 -->
+            <div class="speciality-card">
+
+                <div class="card-icon">
+                    ◇
+                </div>
+
+                <div class="card-number">
+                    02
+                </div>
+
+                <h3>
+                    Durable & Strong
+                </h3>
+
+                <p>
+                    Sturdy and long-lasting, built to
+                    keep up with your everyday life.
+                </p>
+
+                <span class="card-bottom-line"></span>
+
+            </div>
+
+
+
+            <!-- 03 -->
+            <div class="speciality-card">
+
+                <div class="card-icon">
+                    ✦
+                </div>
+
+                <div class="card-number">
+                    03
+                </div>
+
+                <h3>
+                    Timeless Design
+                </h3>
+
+                <p>
+                    Minimal, boho and versatile —
+                    always in style.
+                </p>
+
+                <span class="card-bottom-line"></span>
+
+            </div>
+
+
+
+            <!-- 04 -->
+            <div class="speciality-card">
+
+                <div class="card-icon">
+                    ❧
+                </div>
+
+                <div class="card-number">
+                    04
+                </div>
+
+                <h3>
+                    Lightweight
+                </h3>
+
+                <p>
+                    Easy to move, hang or rearrange
+                    anytime you want.
+                </p>
+
+                <span class="card-bottom-line"></span>
+
+            </div>
+
+
+
+            <!-- 05 -->
+            <div class="speciality-card">
+
+                <div class="card-icon">
+                    ♡
+                </div>
+
+                <div class="card-number">
+                    05
+                </div>
+
+                <h3>
+                    Handmade Charm
+                </h3>
+
+                <p>
+                    Each piece is uniquely handcrafted
+                    with love and care.
+                </p>
+
+                <span class="card-bottom-line"></span>
+
+            </div>
+
+
+
+            <!-- 06 -->
+            <div class="speciality-card">
+
+                <div class="card-icon">
+                    ≋
+                </div>
+
+                <div class="card-number">
+                    06
+                </div>
+
+                <h3>
+                    Breathable Material
+                </h3>
+
+                <p>
+                    Allows better air flow, perfect for
+                    plants and natural living.
+                </p>
+
+                <span class="card-bottom-line"></span>
+
+            </div>
+
+
+
+            <!-- 07 -->
+            <div class="speciality-card">
+
+                <div class="card-icon">
+                    ◇
+                </div>
+
+                <div class="card-number">
+                    07
+                </div>
+
+                <h3>
+                    Fade Resistant
+                </h3>
+
+                <p>
+                    Quality dyed ropes that stay
+                    beautiful for years.
+                </p>
+
+                <span class="card-bottom-line"></span>
+
+            </div>
+
+
+
+            <!-- 08 -->
+            <div class="speciality-card">
+
+                <div class="card-icon">
+                    ✣
+                </div>
+
+                <div class="card-number">
+                    08
+                </div>
+
+                <h3>
+                    Multipurpose
+                </h3>
+
+                <p>
+                    From wall hangings to baskets —
+                    one décor, many uses.
+                </p>
+
+                <span class="card-bottom-line"></span>
+
+            </div>
+
+
+
+            <!-- 09 -->
+            <div class="speciality-card">
+
+                <div class="card-icon">
+                    ○
+                </div>
+
+                <div class="card-number">
+                    09
+                </div>
+
+                <h3>
+                    Easy to Wash
+                </h3>
+
+                <p>
+                    Rope items can be washed and
+                    cleaned with ease.
+                </p>
+
+                <span class="card-bottom-line"></span>
+
+            </div>
+
+
+
+            <!-- 10 -->
+            <div class="speciality-card">
+
+                <div class="card-icon">
+                    ♡
+                </div>
+
+                <div class="card-number">
+                    10
+                </div>
+
+                <h3>
+                    Budget Friendly
+                </h3>
+
+                <p>
+                    Beautiful décor that adds charm
+                    without burning a hole.
+                </p>
+
+                <span class="card-bottom-line"></span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             FOOTER MESSAGE
+        ================================================== -->
+
+        <div class="speciality-footer">
+
+            <span class="footer-line"></span>
+
+            <p>
+                ♥ &nbsp; NATURAL. PRACTICAL. BEAUTIFUL.
+                &nbsp; ♥
+                <strong>THAT'S THE ROPE WAY!</strong>
+            </p>
+
+            <span class="footer-line"></span>
+
+        </div>
+
+
+    </div>
+
+</section>
+<!-- =========================================================
+     WHY KORDIVA
+========================================================= -->
+
+<section class="features-section">
+
+
+    <!-- 01 -->
+
+    <div class="feature-item">
+
+        <div class="feature-icon">
+
+            <svg viewBox="0 0 64 64">
+
+                <path d="M18 38c-7-1-11-6-11-12 7-1 13 2 16 8"></path>
+
+                <path d="M46 38c7-1 11-6 11-12-7-1-13 2-16 8"></path>
+
+                <path d="M16 39c5 0 10 4 16 12 6-8 11-12 16-12"></path>
+
+                <path d="M32 51V34"></path>
+
+                <path d="M32 34c0-7 5-13 12-15"></path>
+
+            </svg>
+
+        </div>
+
+        <div class="feature-text">
+
+            <h3>
+                HANDMADE<br>
+                WITH LOVE
+            </h3>
+
+            <p>
+                Every piece is<br>
+                carefully handmade.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 02 -->
+
+    <div class="feature-item">
+
+        <div class="feature-icon">
+
+            <svg viewBox="0 0 64 64">
+
+                <path d="M32 52V22"></path>
+
+                <path d="M32 31C22 30 15 23 15 13c10 0 17 7 17 18"></path>
+
+                <path d="M32 27c2-10 9-16 19-17 0 10-7 17-19 19"></path>
+
+            </svg>
+
+        </div>
+
+        <div class="feature-text">
+
+            <h3>
+                NATURAL &<br>
+                SUSTAINABLE
+            </h3>
+
+            <p>
+                Made with natural<br>
+                rope and eco-friendly<br>
+                materials.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 03 -->
+
+    <div class="feature-item">
+
+        <div class="feature-icon">
+
+            <svg viewBox="0 0 64 64">
+
+                <path d="M8 30 32 10l24 20"></path>
+
+                <path d="M14 27v27h36V27"></path>
+
+                <path d="M27 54V39h10v15"></path>
+
+            </svg>
+
+        </div>
+
+        <div class="feature-text">
+
+            <h3>
+                PERFECT FOR<br>
+                YOUR HOME
+            </h3>
+
+            <p>
+                Add warmth and<br>
+                charm to any<br>
+                corner.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 04 -->
+
+    <div class="feature-item">
+
+        <div class="feature-icon">
+
+            <svg viewBox="0 0 64 64">
+
+                <rect x="12"
+                      y="25"
+                      width="40"
+                      height="30">
+                </rect>
+
+                <path d="M32 25v30"></path>
+
+                <path d="M12 33h40"></path>
+
+                <path d="M32 25c-4-8-12-12-17-8-5 4 1 8 7 8h10"></path>
+
+                <path d="M32 25c4-8 12-12 17-8 5 4-1 8-7 8H32"></path>
+
+            </svg>
+
+        </div>
+
+        <div class="feature-text">
+
+            <h3>
+                GREAT FOR<br>
+                GIFTING
+            </h3>
+
+            <p>
+                Thoughtful gifts<br>
+                for your loved<br>
+                ones.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+
+    <div class="footer-inner">
+
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+                Kordiva
+            </div>
+
+            <p>
+                ROPE & HOME DECOR
+            </p>
+
+            <span>
+                Live beautifully, decor joyfully.
+            </span>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                QUICK LINKS
+            </h4>
+
+            <a href="{% url 'home' %}">
+                Home
+            </a>
+
+            <a href="{% url 'about' %}">
+                About Us
+            </a>
+
+            <a href="#shop-category">
+                Collection
+            </a>
+
+            <a href="{% url 'contact' %}">
+                Contact
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                HELP
+            </h4>
+
+            <a href="{% url 'privacy_policy' %}">
+                Privacy Policy
+            </a>
+
+            <a href="{% url 'terms_conditions' %}">
+                Terms & Conditions
+            </a>
+
+            <a href="{% url 'shipping_policy' %}">
+                Shipping Policy
+            </a>
+
+            <a href="{% url 'returns_policy' %}">
+                Returns And Refund Policy
+            </a>
+
+        </div>
+        <div class="before-order">
+
+    <a href="{% url 'before_you_order' %}" class="before-order-link">
+
+    <h2>
+        Before You<br>
+        Order
+    </h2>
+
+    </a>
+    <p>
+        Before placing your order, please read our
+        "Before You Order" page for important information
+        regarding product care.
+    </p>
+
+</div>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Kordiva. All Rights Reserved.
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =========================================================
+     HERO SLIDER JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        const slides =
+            document.querySelectorAll(
+                ".kordiva-slide"
+            );
+
+
+        const dots =
+            document.querySelectorAll(
+                ".hero-dot"
+            );
+
+
+        const nextButton =
+            document.querySelector(
+                ".hero-next"
+            );
+
+
+        const prevButton =
+            document.querySelector(
+                ".hero-prev"
+            );
+
+
+        const bottomNumber =
+            document.querySelector(
+                ".hero-bottom-text span"
+            );
+
+
+        let currentSlide = 0;
+
+        let autoSlide;
+
+
+
+        /* ==========================================
+           SHOW SLIDE
+        ========================================== */
+
+        function showSlide(index) {
+
+
+            if (index >= slides.length) {
+
+                index = 0;
+
+            }
+
+
+            if (index < 0) {
+
+                index =
+                    slides.length - 1;
+
+            }
+
+
+            slides.forEach(
+                function(slide) {
+
+                    slide.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+            dots.forEach(
+                function(dot) {
+
+                    dot.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+            slides[index].classList.add(
+                "active"
+            );
+
+
+            dots[index].classList.add(
+                "active"
+            );
+
+
+            currentSlide = index;
+
+
+            if (bottomNumber) {
+
+                bottomNumber.textContent =
+                    String(index + 1)
+                    .padStart(2, "0");
+
+            }
+
+        }
+
+
+
+        /* ==========================================
+           NEXT
+        ========================================== */
+
+        function nextSlide() {
+
+            showSlide(
+                currentSlide + 1
+            );
+
+            restartAutoSlide();
+
+        }
+
+
+
+        /* ==========================================
+           PREVIOUS
+        ========================================== */
+
+        function previousSlide() {
+
+            showSlide(
+                currentSlide - 1
+            );
+
+            restartAutoSlide();
+
+        }
+
+
+
+        /* ==========================================
+           BUTTONS
+        ========================================== */
+
+        if (nextButton) {
+
+            nextButton.addEventListener(
+                "click",
+                nextSlide
+            );
+
+        }
+
+
+        if (prevButton) {
+
+            prevButton.addEventListener(
+                "click",
+                previousSlide
+            );
+
+        }
+
+
+
+        /* ==========================================
+           DOTS
+        ========================================== */
+
+        dots.forEach(
+            function(dot, index) {
+
+                dot.addEventListener(
+                    "click",
+                    function() {
+
+                        showSlide(index);
+
+                        restartAutoSlide();
+
+                    }
+                );
+
+            }
+        );
+
+
+
+        /* ==========================================
+           AUTO SLIDER
+        ========================================== */
+
+        function startAutoSlide() {
+
+            autoSlide =
+                setInterval(
+                    function() {
+
+                        showSlide(
+                            currentSlide + 1
+                        );
+
+                    },
+                    5000
+                );
+
+        }
+
+
+
+        function restartAutoSlide() {
+
+            clearInterval(
+                autoSlide
+            );
+
+            startAutoSlide();
+
+        }
+
+
+
+        /* START */
+
+        showSlide(0);
+
+        startAutoSlide();
+
+
+    }
+
+);
+
+</script>
+
+
+
+<!-- =========================================================
+     CART COUNT
+========================================================= -->
+
+<script>
+
+function updateCartCount() {
+
+
+    const cart =
+        JSON.parse(
+            localStorage.getItem(
+                "kordivaCart"
+            )
+        ) || [];
+
+
+    let totalQuantity = 0;
+
+
+    cart.forEach(
+        function(item) {
+
+            totalQuantity +=
+                Number(item.quantity) || 0;
+
+        }
+    );
+
+
+    const cartCount =
+        document.querySelector(
+            ".cart-count"
+        );
+
+
+    if (cartCount) {
+
+        cartCount.textContent =
+            totalQuantity;
+
+    }
+
+}
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    updateCartCount
+);
+
+
+</script>
+
+
+
+<script src="{% static 'products/main.js' %}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart | Kordiva</title>
+
+    <link rel="stylesheet" href="{% static 'products/cart.css' %}">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         CART PAGE
+    ========================================================== -->
+
+    <section class="cart-page">
+
+        <div class="cart-container">
+
+
+            <!-- =================================================
+                 PAGE HEADING
+            ================================================== -->
+
+            <div class="cart-heading">
+
+                <p class="cart-small-title">
+                    YOUR SHOPPING CART
+                </p>
+
+                <h1>
+                    Your Cart
+                </h1>
+
+                <p class="cart-subtitle">
+                    Review your selected items before checkout.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CART CONTENT
+            ================================================== -->
+
+            <div class="cart-layout">
+
+
+                <!-- =================================================
+                     LEFT SIDE — CART ITEMS
+                ================================================== -->
+
+                <div class="cart-items-section">
+
+
+                    <!-- Products will come here from localStorage -->
+
+                    <div id="cartItemsContainer"></div>
+
+
+
+                    <!-- =================================================
+                         EMPTY CART
+                    ================================================== -->
+
+                    <div
+                        class="empty-cart"
+                        id="emptyCart"
+                    >
+
+                        <div class="empty-cart-icon">
+                            🛒
+                        </div>
+
+                        <h2>
+                            Your cart is empty
+                        </h2>
+
+                        <p>
+                            Looks like you haven't added anything
+                            to your cart yet.
+                        </p>
+
+                        <a
+                            href="{% url 'home' %}#shop-category"
+                            class="shop-now-btn"
+                        >
+                            SHOP NOW
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         CONTINUE SHOPPING
+                    ================================================== -->
+
+                    <a
+                        href="{% url 'home' %}#shop-category"
+                        class="continue-shopping"
+                    >
+                        ← Continue Shopping
+                    </a>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RIGHT SIDE — ORDER SUMMARY
+                ================================================== -->
+
+                <aside
+                    class="cart-summary"
+                    id="cartSummary"
+                >
+
+
+                    <h2>
+                        Order Summary
+                    </h2>
+
+
+
+                    <!-- CART SUBTOTAL -->
+
+                    <div class="summary-row">
+
+                        <span>
+                            Cart Subtotal
+                        </span>
+
+                        <span id="cartSubtotal">
+                            ₹0
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- DELIVERY -->
+
+                    <div class="summary-row">
+
+                        <span>
+                            Delivery
+                        </span>
+
+                        <span id="deliveryCharge">
+                            ₹0
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- DIVIDER -->
+
+                    <div class="summary-line"></div>
+
+
+
+                    <!-- GRAND TOTAL -->
+
+                    <div class="summary-total">
+
+                        <span>
+                            Grand Total
+                        </span>
+
+                        <strong id="grandTotal">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         PROCEED TO CHECKOUT
+                    ================================================== -->
+
+                    <a
+                        href="{% url 'checkout' %}"
+                        class="checkout-btn"
+                    >
+                        PROCEED TO CHECKOUT
+                    </a>
+
+
+
+                    <!-- SECURITY TEXT -->
+
+                    <p class="secure-text">
+                        Secure checkout · Handmade with care
+                    </p>
+
+
+                </aside>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         CART JAVASCRIPT
+    ========================================================== -->
+
+    <script src="{% static 'products/cart.js' %}"></script>
+
+
+</body>
+</html>
+

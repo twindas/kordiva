@@ -1,0 +1,197 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Order Successful | Kordiva</title>
+
+    <link
+        rel="stylesheet"
+        href="{% static 'products/order_success.css' %}"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         ORDER SUCCESS PAGE
+    ====================================================== -->
+
+    <section class="order-success-page">
+
+        <div class="order-success-container">
+
+
+            <!-- SUCCESS ICON -->
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+
+            <!-- HEADING -->
+
+            <p class="success-small-title">
+                THANK YOU FOR SHOPPING WITH KORDIVA
+            </p>
+
+            <h1>
+                Order Placed Successfully!
+            </h1>
+
+            <p class="success-message">
+                Your order has been received successfully.
+                We will process your order shortly.
+            </p>
+
+
+            <!-- ORDER ID -->
+
+            <div class="order-id-box">
+
+                <span>
+                    Order ID
+                </span>
+
+                <strong id="orderId">
+                    —
+                </strong>
+
+            </div>
+
+
+            <!-- ORDER DETAILS -->
+
+            <div class="order-details">
+
+                <h2>
+                    Order Details
+                </h2>
+
+
+                <!-- CUSTOMER -->
+
+                <div class="detail-row">
+
+                    <span>
+                        Customer
+                    </span>
+
+                    <strong id="customerName">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <!-- PAYMENT -->
+
+                <div class="detail-row">
+
+                    <span>
+                        Payment Method
+                    </span>
+
+                    <strong id="paymentMethod">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <!-- TOTAL -->
+
+                <div class="detail-row total-row">
+
+                    <span>
+                        Grand Total
+                    </span>
+
+                    <strong id="grandTotal">
+                        ₹0.00
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ORDER ITEMS -->
+
+            <div class="ordered-items">
+
+                <h2>
+                    Your Items
+                </h2>
+
+                <div id="orderedItems">
+                    <!-- Items will appear here -->
+                </div>
+
+            </div>
+
+
+            <!-- DELIVERY ADDRESS -->
+
+            <div class="delivery-address">
+
+                <h2>
+                    Delivery Address
+                </h2>
+
+                <p id="deliveryAddress">
+                    —
+                </p>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="success-buttons">
+
+                <a
+                    href="{% url 'home' %}"
+                    class="continue-shopping-btn"
+                >
+                    CONTINUE SHOPPING
+                </a>
+
+                <a
+                    href="{% url 'home' %}"
+                    class="home-btn"
+                >
+                    BACK TO HOME
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ORDER SUCCESS JAVASCRIPT
+    ====================================================== -->
+
+    <script src="{% static 'products/order_success.js' %}"></script>
+
+
+</body>
+
+</html>

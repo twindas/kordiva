@@ -1,0 +1,350 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Saved Address | Kordiva</title>
+
+    <link rel="stylesheet"
+          href="{% static 'products/saved_address.css' %}">
+
+</head>
+
+
+<body>
+
+
+<section class="saved-address-page">
+
+    <div class="saved-address-container">
+
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+        <div class="saved-address-heading">
+
+            <span class="address-label">
+                K O R D I V A
+            </span>
+
+            <h1>
+                Saved Address
+            </h1>
+
+            <p>
+                Manage your delivery information.
+            </p>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             ADDRESS CARD
+        ====================================================== -->
+
+        <div class="address-card">
+
+
+            <div class="address-card-header">
+
+                <div>
+
+                    <span class="section-label">
+                        DELIVERY
+                    </span>
+
+                    <h2>
+                        {% if address %}
+                            Update Your Address
+                        {% else %}
+                            Add Your Address
+                        {% endif %}
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ERROR MESSAGE
+            ================================================== -->
+
+            {% if error %}
+
+                <div class="address-error">
+
+                    {{ error }}
+
+                </div>
+
+            {% endif %}
+
+
+
+            <!-- =================================================
+                 ADDRESS FORM
+            ================================================== -->
+
+            <form method="POST"
+                  class="address-form"
+                  id="savedAddressForm">
+
+                {% csrf_token %}
+
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label for="full_name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="full_name"
+                        name="full_name"
+                        placeholder="Enter your full name"
+                        value="{% if address %}{{ address.full_name }}{% endif %}"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- MOBILE -->
+
+                <div class="form-group">
+
+                    <label for="mobile">
+                        Mobile Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="mobile"
+                        name="mobile"
+                        placeholder="Enter your mobile number"
+                        value="{% if address %}{{ address.mobile }}{% endif %}"
+                        maxlength="15"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- FULL ADDRESS -->
+
+                <div class="form-group">
+
+                    <label for="address">
+                        Full Address
+                    </label>
+
+                    <textarea
+                        id="address"
+                        name="address"
+                        rows="4"
+                        placeholder="House / Flat, Street, Area"
+                        required
+                    >{% if address %}{{ address.address }}{% endif %}</textarea>
+
+                </div>
+
+
+
+                <!-- CITY + STATE -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="city">
+                            City
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            placeholder="Enter city"
+                            value="{% if address %}{{ address.city }}{% endif %}"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="state">
+                            State
+                        </label>
+
+                        <input
+                            type="text"
+                            id="state"
+                            name="state"
+                            placeholder="Enter state"
+                            value="{% if address %}{{ address.state }}{% endif %}"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- PIN -->
+
+                <div class="form-group">
+
+                    <label for="pin">
+                        PIN Code
+                    </label>
+
+                    <input
+                        type="text"
+                        id="pin"
+                        name="pin"
+                        placeholder="Enter PIN code"
+                        value="{% if address %}{{ address.pin }}{% endif %}"
+                        maxlength="10"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- =================================================
+                     BUTTON
+                ================================================== -->
+
+                <button
+                    type="submit"
+                    class="save-address-btn"
+                    id="saveAddressBtn"
+                >
+
+                    <span>
+                        {% if address %}
+                            UPDATE ADDRESS
+                        {% else %}
+                            SAVE ADDRESS
+                        {% endif %}
+                    </span>
+
+                    <span class="save-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+             SAVED ADDRESS PREVIEW
+        ====================================================== -->
+
+        {% if address %}
+
+        <div class="saved-preview">
+
+            <div class="preview-header">
+
+                <span>
+                    SAVED ADDRESS
+                </span>
+
+                <span class="saved-badge">
+                    SAVED
+                </span>
+
+            </div>
+
+
+            <div class="preview-content">
+
+                <strong>
+                    {{ address.full_name }}
+                </strong>
+
+                <span>
+                    {{ address.mobile }}
+                </span>
+
+                <p>
+                    {{ address.address }}
+                </p>
+
+                <span>
+                    {{ address.city }},
+                    {{ address.state }}
+                    - {{ address.pin }}
+                </span>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+
+
+        <!-- =====================================================
+             BACK TO ACCOUNT
+        ====================================================== -->
+
+        <a href="{% url 'account' %}"
+           class="back-account">
+
+            <span>
+                ←
+            </span>
+
+            Back to Account
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="{% static 'products/saved_address.js' %}"></script>
+
+
+</body>
+
+</html>

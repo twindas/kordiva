@@ -1,0 +1,770 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>About Us | Kordiva</title>
+
+    <link
+        rel="stylesheet"
+        href="{% static 'products/about.css' %}"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="about-navbar">
+
+    <div class="about-nav-inner">
+
+
+        <a href="{% url 'home' %}" class="kordiva-logo">
+
+            <span class="logo-symbol">K</span>
+
+            <span class="logo-text">
+                Kordiva
+            </span>
+
+        </a>
+
+
+        <nav class="about-nav-links">
+
+            <a href="{% url 'home' %}">
+                Home
+            </a>
+
+            <a href="#story">
+                Our Story
+            </a>
+
+            <a href="#journey">
+                Journey
+            </a>
+
+            <a href="#founder">
+                Founder
+            </a>
+
+            <a href="{% url 'contact' %}">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a
+            href="{% url 'cart' %}"
+            class="about-cart"
+        >
+            Cart
+            <span class="cart-count">0</span>
+        </a>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="about-hero">
+
+
+    <div class="hero-decoration hero-decoration-one">
+        〰
+    </div>
+
+
+    <div class="hero-content">
+
+
+        <p class="hero-small">
+            THE STORY BEHIND KORDIVA
+        </p>
+
+
+        <h1>
+
+            More Than Decor.
+            <span>
+                Made With Meaning.
+            </span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            We create thoughtfully handmade rope décor
+            that brings warmth, character and beauty
+            into everyday spaces.
+
+        </p>
+
+
+        <a
+            href="#story"
+            class="hero-scroll"
+        >
+
+            <span>
+                Discover our story
+            </span>
+
+            <span class="scroll-arrow">
+                ↓
+            </span>
+
+        </a>
+
+
+    </div>
+
+
+    <div class="hero-bottom-text">
+
+        <span>
+            ROPE & HOME DECOR
+        </span>
+
+        <span>
+            HANDMADE WITH CARE
+        </span>
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     OUR STORY
+===================================================== -->
+
+<section
+    class="story-section reveal-section"
+    id="story"
+>
+
+
+    <div class="section-number">
+        01
+    </div>
+
+
+    <div class="story-layout">
+
+
+        <div class="story-heading">
+
+            <p class="eyebrow">
+                OUR STORY
+            </p>
+
+            <h2>
+
+                Small details
+                <br>
+
+                <em>
+                    make a space
+                </em>
+
+                feel like home.
+
+            </h2>
+
+        </div>
+
+
+        <div class="story-text">
+
+            <p>
+
+                Kordiva was born from a simple idea —
+                beautiful things don't always have to be
+                complicated.
+
+            </p>
+
+
+            <p>
+
+                We believe that the smallest details can
+                completely change the feeling of a room.
+                A carefully made wall hanging, a thoughtful
+                organizer or a simple rope creation can add
+                warmth, texture and personality to everyday
+                spaces.
+
+            </p>
+
+
+            <p>
+
+                That's why we create pieces that are
+                practical, beautiful and made with care.
+
+            </p>
+
+
+            <div class="story-signature">
+
+                <span>
+                    Made by hand
+                </span>
+
+                <span>
+                    Made to last
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     KORDIVA — PURPOSE SECTION
+========================================================= -->
+
+<section class="purpose-section">
+
+    <div class="purpose-heading">
+
+        <span class="purpose-eyebrow">
+            WHAT WE BELIEVE
+        </span>
+
+        <h2>
+            Beauty should
+            <em>have a purpose.</em>
+        </h2>
+
+        <p>
+            Thoughtfully crafted rope creations,
+            made to bring warmth, character and
+            everyday beauty into your space.
+        </p>
+
+    </div>
+
+
+    <div class="purpose-cards">
+
+
+        <!-- CARD 01 -->
+
+        <div class="purpose-card">
+
+            <div class="purpose-top">
+
+                <span class="purpose-number">
+                    01
+                </span>
+
+                <span class="purpose-symbol">
+                    ◌
+                </span>
+
+            </div>
+
+            <div class="purpose-content">
+
+                <h3>
+                    Thoughtfully Made
+                </h3>
+
+                <p>
+                    Every piece is created with
+                    attention to detail, texture
+                    and everyday usability.
+                </p>
+
+            </div>
+
+            <span class="purpose-line"></span>
+
+        </div>
+
+
+
+        <!-- CARD 02 -->
+
+        <div class="purpose-card">
+
+            <div class="purpose-top">
+
+                <span class="purpose-number">
+                    02
+                </span>
+
+                <span class="purpose-symbol">
+                    ◇
+                </span>
+
+            </div>
+
+            <div class="purpose-content">
+
+                <h3>
+                    Naturally Beautiful
+                </h3>
+
+                <p>
+                    We love the warmth and character
+                    of rope and the simple beauty
+                    it brings into a space.
+                </p>
+
+            </div>
+
+            <span class="purpose-line"></span>
+
+        </div>
+
+
+
+        <!-- CARD 03 -->
+
+        <div class="purpose-card">
+
+            <div class="purpose-top">
+
+                <span class="purpose-number">
+                    03
+                </span>
+
+                <span class="purpose-symbol">
+                    ∞
+                </span>
+
+            </div>
+
+            <div class="purpose-content">
+
+                <h3>
+                    Made For Everyday Life
+                </h3>
+
+                <p>
+                    Our designs are created to be
+                    useful, durable and easy
+                    to live with.
+                </p>
+
+            </div>
+
+            <span class="purpose-line"></span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     JOURNEY
+===================================================== -->
+
+<section
+    class="journey-section reveal-section"
+    id="journey"
+>
+
+
+    <div class="journey-header">
+
+        <div>
+
+            <p class="eyebrow">
+                OUR JOURNEY
+            </p>
+
+            <h2>
+                From an idea
+                <br>
+                to <em>Kordiva.</em>
+            </h2>
+
+        </div>
+
+
+        <p class="journey-intro">
+
+            Every brand begins somewhere.
+            Ours began with creativity, curiosity
+            and a love for handmade things.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="timeline">
+
+
+        <!-- ITEM 01 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                01
+            </div>
+
+            <div class="timeline-line"></div>
+
+            <div class="timeline-content">
+
+                <span>
+                    THE BEGINNING
+                </span>
+
+                <h3>
+                    A simple idea
+                </h3>
+
+                <p>
+
+                    What started as an appreciation for
+                    handmade rope creations slowly became
+                    an idea to create something of our own.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ITEM 02 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                02
+            </div>
+
+            <div class="timeline-line"></div>
+
+            <div class="timeline-content">
+
+                <span>
+                    EXPLORING
+                </span>
+
+                <h3>
+                    Learning the craft
+                </h3>
+
+                <p>
+
+                    We experimented with shapes, textures,
+                    knots and designs — discovering how
+                    something as simple as rope can become
+                    something beautiful.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ITEM 03 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                03
+            </div>
+
+            <div class="timeline-line"></div>
+
+            <div class="timeline-content">
+
+                <span>
+                    CREATING
+                </span>
+
+                <h3>
+                    Building the collection
+                </h3>
+
+                <p>
+
+                    Slowly, ideas became products.
+                    Each design was created with a balance
+                    between beauty and everyday usefulness.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ITEM 04 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                04
+            </div>
+
+            <div class="timeline-line"></div>
+
+            <div class="timeline-content">
+
+                <span>
+                    KORDIVA
+                </span>
+
+                <h3>
+                    And here we are.
+                </h3>
+
+                <p>
+
+                    Kordiva is growing one handmade piece
+                    at a time — with new ideas, new designs
+                    and a promise to keep creating with care.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOUNDER
+===================================================== -->
+
+<section
+    class="founder-section reveal-section"
+    id="founder"
+>
+
+
+    <div class="founder-mark">
+
+        <div class="founder-circle">
+
+            <span>
+                K
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="founder-content">
+
+
+        <p class="eyebrow">
+            THE PERSON BEHIND KORDIVA
+        </p>
+
+
+        <h2>
+            Meet the
+            <br>
+            <em>Founder</em>
+        </h2>
+
+
+        <div class="founder-name">
+
+            <span>
+                KORDIVA
+            </span>
+
+            <strong>
+                Mumpy Das
+            </strong>
+
+        </div>
+
+
+        <p class="founder-description">
+
+            Behind every idea is a person who believes
+            it is worth creating.
+
+            <br><br>
+
+            Kordiva is driven by a love for creativity,
+            thoughtful design and the belief that handmade
+            products can make everyday spaces feel more
+            personal.
+
+        </p>
+
+
+    </div>
+
+
+</section>
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section
+    class="about-cta reveal-section"
+>
+
+
+    <div class="cta-logo">
+
+        <span>
+            K
+        </span>
+
+    </div>
+
+
+    <p class="eyebrow">
+        WELCOME TO KORDIVA
+    </p>
+
+
+    <h2>
+
+        Decorate with meaning.
+        <br>
+
+        <em>Live beautifully.</em>
+
+    </h2>
+
+
+    <p>
+
+        Discover handmade pieces created to bring
+        warmth, character and joy into your space.
+
+    </p>
+
+
+    <a
+        href="{% url 'home' %}#shop-category"
+        class="cta-button"
+    >
+
+        Explore Collection
+
+        <span>
+            →
+        </span>
+
+    </a>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="about-footer">
+
+
+    <div class="footer-logo">
+
+        <span class="logo-symbol">
+            K
+        </span>
+
+        <span>
+            Kordiva
+        </span>
+
+    </div>
+
+
+    <p>
+        Rope & Home Decor
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="{% url 'home' %}">
+            Home
+        </a>
+
+        <a href="{% url 'contact' %}">
+            Contact
+        </a>
+
+        <a href="{% url 'cart' %}">
+            Cart
+        </a>
+
+    </div>
+
+
+    <div class="footer-copy">
+
+        © 2026 Kordiva.
+        All Rights Reserved.
+
+    </div>
+
+
+</footer>
+
+
+
+<script
+    src="{% static 'products/about.js' %}"
+></script>
+
+
+</body>
+
+</html>

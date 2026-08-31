@@ -1,0 +1,328 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Before You Order | Kordiva</title>
+
+    <link rel="stylesheet"
+          href="{% static 'products/before_you_order.css' %}">
+
+</head>
+
+
+<body>
+
+
+<section class="before-order-page">
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <div class="before-order-hero">
+
+        <span class="hero-label">
+            K O R D I V A
+        </span>
+
+        <h1>
+            Before You
+            <span>Order.</span>
+        </h1>
+
+        <p>
+            A little note about the beauty,
+            character and uniqueness of handmade craftsmanship.
+        </p>
+
+        <div class="hero-line"></div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
+
+    <div class="intro-section">
+
+        <span class="section-label">
+            PLEASE READ
+        </span>
+
+        <h2>
+            Important Information
+            <br>
+            About Our Handmade Products
+        </h2>
+
+        <p>
+            Every Kordiva creation is made with patience,
+            care and human hands. That means no two pieces
+            are ever perfectly identical — and that's exactly
+            what makes them special.
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         INFORMATION CARDS
+    ====================================================== -->
+
+    <div class="information-list">
+
+
+        <!-- =================================================
+             01
+        ================================================== -->
+
+        <article class="info-card reveal-left">
+
+            <div class="card-number">
+                01
+            </div>
+
+            <div class="card-content">
+
+                <span class="card-label">
+                    HANDMADE UNIQUENESS
+                </span>
+
+                <h2>
+                    Every Piece Is
+                    Uniquely Handmade
+                </h2>
+
+                <p>
+                    Each Kordiva product is carefully handmade.
+                    Therefore, even if you order five pieces of
+                    the same design, they may not be exactly
+                    identical. We do not promise machine-like
+                    uniformity, as every piece is crafted by hand.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             02
+        ================================================== -->
+
+        <article class="info-card reveal-right">
+
+            <div class="card-number">
+                02
+            </div>
+
+            <div class="card-content">
+
+                <span class="card-label">
+                    PRODUCT APPEARANCE
+                </span>
+
+                <h2>
+                    Slight Differences
+                    From Product Photos
+                </h2>
+
+                <p>
+                    The product you receive will be approximately
+                    98–99% similar to the product shown in the
+                    photos. Due to the handmade process, there may
+                    be very slight differences in shape, knots,
+                    weaving, texture, or finishing.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             03
+        ================================================== -->
+
+        <article class="info-card reveal-left">
+
+            <div class="card-number">
+                03
+            </div>
+
+            <div class="card-content">
+
+                <span class="card-label">
+                    COLOUR & LIGHT
+                </span>
+
+                <h2>
+                    Colour May
+                    Vary Slightly
+                </h2>
+
+                <p>
+                    The actual colour of a product may appear
+                    slightly different from the photos due to
+                    lighting conditions, photography, screen
+                    brightness, and individual display settings.
+                    We always try to show the product as accurately
+                    as possible.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             04
+        ================================================== -->
+
+        <article class="info-card reveal-right">
+
+            <div class="card-number">
+                04
+            </div>
+
+            <div class="card-content">
+
+                <span class="card-label">
+                    NATURAL CHARACTER
+                </span>
+
+                <h2>
+                    Natural Handmade
+                    Imperfections
+                </h2>
+
+                <p>
+                    Small variations, uneven knots, minor
+                    differences in texture, or slight irregularities
+                    may occur. These are not defects but natural
+                    characteristics of handmade craftsmanship.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             05
+        ================================================== -->
+
+        <article class="info-card reveal-left">
+
+            <div class="card-number">
+                05
+            </div>
+
+            <div class="card-content">
+
+                <span class="card-label">
+                    PRODUCT DIMENSIONS
+                </span>
+
+                <h2>
+                    Measurements May
+                    Vary Slightly
+                </h2>
+
+                <p>
+                    Although we provide product dimensions, a small
+                    variation in measurements may occur because every
+                    piece is handmade. We always try to keep the
+                    product as close as possible to the listed
+                    dimensions.
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         OUR PROMISE
+    ====================================================== -->
+
+    <section class="promise-section">
+
+        <div class="promise-glow"></div>
+
+        <span class="promise-label">
+            OUR PROMISE
+        </span>
+
+        <div class="promise-mark">
+            ✦
+        </div>
+
+        <h2>
+            Not perfectly identical.
+            <br>
+            <span>Perfectly handmade.</span>
+        </h2>
+
+        <p>
+            Every piece carries the little touch
+            of the hands that made it.
+        </p>
+
+        <div class="promise-line"></div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BACK
+    ====================================================== -->
+
+    <div class="back-section">
+
+        <a href="{% url 'home' %}"
+           class="back-home">
+
+            <span>
+                ←
+            </span>
+
+            Back to Home
+
+        </a>
+
+    </div>
+
+
+</section>
+
+
+
+<script src="{% static 'products/before_you_order.js' %}">
+</script>
+
+
+</body>
+
+</html>

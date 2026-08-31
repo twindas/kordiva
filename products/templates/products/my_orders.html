@@ -1,0 +1,219 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Orders | Kordiva</title>
+
+    <link rel="stylesheet"
+          href="{% static 'products/my_orders.css' %}">
+
+</head>
+
+<body>
+
+<section class="orders-page">
+
+    <div class="orders-container">
+
+        <!-- HEADER -->
+
+        <div class="orders-heading">
+
+            <span class="orders-label">
+                K O R D I V A
+            </span>
+
+            <h1>
+                My Orders
+            </h1>
+
+            <p>
+                View and manage your previous orders.
+            </p>
+
+        </div>
+
+
+        <!-- ORDERS -->
+
+        {% if orders %}
+
+            <div class="orders-list">
+
+                {% for order in orders %}
+
+                    <div class="order-card">
+
+                        <!-- ORDER HEADER -->
+
+                        <div class="order-header">
+
+                            <div>
+
+                                <span class="order-label">
+                                    ORDER
+                                </span>
+
+                                <h2>
+                                    #{{ order.id }}
+                                </h2>
+
+                            </div>
+
+
+                            <div class="order-status">
+
+                                {{ order.get_status_display }}
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ORDER INFO -->
+
+                        <div class="order-info">
+
+                            <div>
+
+                                <span>
+                                    ORDER DATE
+                                </span>
+
+                                <strong>
+                                    {{ order.created_at|date:"d M Y" }}
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    PAYMENT
+                                </span>
+
+                                <strong>
+                                    {{ order.get_payment_method_display }}
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    TOTAL
+                                </span>
+
+                                <strong>
+                                    ₹{{ order.grand_total }}
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PRODUCTS -->
+
+                        <div class="order-items">
+
+                            {% for item in order.items.all %}
+
+                                <div class="order-item">
+
+                                    <div class="item-details">
+
+                                        <strong>
+                                            {{ item.product_name }}
+                                        </strong>
+
+                                        <span>
+                                            Quantity: {{ item.quantity }}
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="item-price">
+
+                                        ₹{{ item.item_total }}
+
+                                    </div>
+
+                                </div>
+
+                            {% endfor %}
+
+                        </div>
+
+
+                        <!-- FOOTER -->
+
+                        <div class="order-footer">
+
+                            <span>
+                                Grand Total
+                            </span>
+
+                            <strong>
+                                ₹{{ order.grand_total }}
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        {% else %}
+
+            <!-- NO ORDERS -->
+
+            <div class="no-orders">
+
+                <h2>
+                    No Orders Yet
+                </h2>
+
+                <p>
+                    You haven't placed any orders yet.
+                </p>
+
+                <a href="{% url 'home' %}">
+                    START SHOPPING
+                </a>
+
+            </div>
+
+        {% endif %}
+
+
+        <!-- BACK TO ACCOUNT -->
+
+        <a href="{% url 'account' %}"
+           class="back-account">
+
+            ← Back to Account
+
+        </a>
+
+    </div>
+
+</section>
+
+
+</body>
+
+</html>

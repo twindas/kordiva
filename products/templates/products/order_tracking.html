@@ -1,0 +1,426 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Order Tracking | Kordiva</title>
+
+    <link rel="stylesheet"
+          href="{% static 'products/order_tracking.css' %}">
+
+</head>
+
+
+<body>
+
+
+<section class="tracking-page">
+
+    <div class="tracking-container">
+
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+        <div class="tracking-heading">
+
+            <span class="tracking-label">
+                K O R D I V A
+            </span>
+
+            <h1>
+                Order Tracking
+            </h1>
+
+            <p>
+                Track your Kordiva order and check its delivery status.
+            </p>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             SEARCH BOX
+        ====================================================== -->
+
+        <div class="tracking-search-card">
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <label for="order_id">
+                    ENTER ORDER ID
+                </label>
+
+                <div class="tracking-search">
+
+                    <input
+                        type="number"
+                        id="order_id"
+                        name="order_id"
+                        placeholder="Example: 6"
+                        required
+                    >
+
+                    <button type="submit">
+                        TRACK ORDER
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            {% if error %}
+
+                <div class="tracking-error">
+
+                    {{ error }}
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+
+
+        <!-- =====================================================
+             ORDER RESULT
+        ====================================================== -->
+
+        {% if order %}
+
+            <div class="order-result">
+
+
+                <!-- ORDER HEADER -->
+
+                <div class="result-header">
+
+                    <div>
+
+                        <span>
+                            ORDER
+                        </span>
+
+                        <h2>
+                            #{{ order.id }}
+                        </h2>
+
+                    </div>
+
+
+                    <div class="current-status">
+
+                        {{ order.get_status_display }}
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ORDER BASIC INFO -->
+
+                <div class="result-info">
+
+                    <div>
+
+                        <span>
+                            ORDER DATE
+                        </span>
+
+                        <strong>
+                            {{ order.created_at|date:"d M Y" }}
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            PAYMENT
+                        </span>
+
+                        <strong>
+                            {{ order.get_payment_method_display }}
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            TOTAL
+                        </span>
+
+                        <strong>
+                            ₹{{ order.grand_total }}
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TRACKING TIMELINE
+                ================================================== -->
+
+                <div class="tracking-section">
+
+                    <h3>
+                        Delivery Status
+                    </h3>
+
+
+                    <div class="tracking-timeline">
+
+
+                        <!-- PENDING -->
+
+                        <div class="
+                            tracking-step
+                            {% if order.status == 'pending' or order.status == 'confirmed' or order.status == 'processing' or order.status == 'shipped' or order.status == 'delivered' %}
+                                completed
+                            {% endif %}
+                        ">
+
+                            <div class="step-dot">
+                                ✓
+                            </div>
+
+                            <div class="step-content">
+
+                                <strong>
+                                    Order Placed
+                                </strong>
+
+                                <span>
+                                    Your order has been received.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CONFIRMED -->
+
+                        <div class="
+                            tracking-step
+                            {% if order.status == 'confirmed' or order.status == 'processing' or order.status == 'shipped' or order.status == 'delivered' %}
+                                completed
+                            {% endif %}
+                        ">
+
+                            <div class="step-dot">
+                                ✓
+                            </div>
+
+                            <div class="step-content">
+
+                                <strong>
+                                    Order Confirmed
+                                </strong>
+
+                                <span>
+                                    Your order has been confirmed.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- PROCESSING -->
+
+                        <div class="
+                            tracking-step
+                            {% if order.status == 'processing' or order.status == 'shipped' or order.status == 'delivered' %}
+                                completed
+                            {% endif %}
+                        ">
+
+                            <div class="step-dot">
+                                ✓
+                            </div>
+
+                            <div class="step-content">
+
+                                <strong>
+                                    Processing
+                                </strong>
+
+                                <span>
+                                    Your order is being prepared.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- SHIPPED -->
+
+                        <div class="
+                            tracking-step
+                            {% if order.status == 'shipped' or order.status == 'delivered' %}
+                                completed
+                            {% endif %}
+                        ">
+
+                            <div class="step-dot">
+                                ✓
+                            </div>
+
+                            <div class="step-content">
+
+                                <strong>
+                                    Shipped
+                                </strong>
+
+                                <span>
+                                    Your order has been shipped.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- DELIVERED -->
+
+                        <div class="
+                            tracking-step
+                            {% if order.status == 'delivered' %}
+                                completed
+                            {% endif %}
+                        ">
+
+                            <div class="step-dot">
+                                ✓
+                            </div>
+
+                            <div class="step-content">
+
+                                <strong>
+                                    Delivered
+                                </strong>
+
+                                <span>
+                                    Your order has been delivered.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ORDER ITEMS
+                ================================================== -->
+
+                <div class="tracked-items">
+
+                    <h3>
+                        Your Items
+                    </h3>
+
+
+                    {% for item in order.items.all %}
+
+                        <div class="tracked-item">
+
+                            <div>
+
+                                <strong>
+                                    {{ item.product_name }}
+                                </strong>
+
+                                <span>
+                                    Quantity: {{ item.quantity }}
+                                </span>
+
+                            </div>
+
+
+                            <strong>
+                                ₹{{ item.item_total }}
+                            </strong>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+
+
+                <!-- TOTAL -->
+
+                <div class="tracked-total">
+
+                    <span>
+                        GRAND TOTAL
+                    </span>
+
+                    <strong>
+                        ₹{{ order.grand_total }}
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        {% endif %}
+
+
+
+        <!-- =====================================================
+             BACK TO ACCOUNT
+        ====================================================== -->
+
+        <a href="{% url 'account' %}"
+           class="back-account">
+
+            ← Back to Account
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<script src="{% static 'products/order_tracking.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,876 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>{{ product.name }} | Kordiva</title>
+
+    <link rel="stylesheet"
+          href="{% static 'products/product_detail.css' %}">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+
+        <!-- LEFT NAVIGATION -->
+
+        <nav class="main-nav">
+
+            <a href="{% url 'home' %}"
+               class="nav-link">
+
+                HOME
+
+            </a>
+
+
+            <a href="{% url 'home' %}#shop-category"
+               class="nav-link active">
+
+                SHOP
+
+            </a>
+
+
+            <a href="#"
+               class="nav-link">
+
+                ABOUT US
+
+            </a>
+
+
+            <a href="#"
+               class="nav-link">
+
+                COLLECTION
+
+            </a>
+
+
+            <a href="{% url 'contact' %}"
+               class="nav-link">
+
+                CONTACT
+
+            </a>
+
+        </nav>
+
+
+        <!-- LOGO -->
+
+        <a href="{% url 'home' %}"
+           class="brand-logo">
+
+            <div class="logo-circle">
+
+                <span>K</span>
+
+            </div>
+
+
+            <div class="brand-name">
+
+                Kordiva
+
+            </div>
+
+
+            <div class="brand-tagline">
+
+                ROPE & HOME DECOR
+
+            </div>
+
+        </a>
+
+
+        <!-- RIGHT ICONS -->
+
+        <div class="header-actions">
+
+
+            <!-- SEARCH -->
+
+            <button class="icon-button"
+                    aria-label="Search">
+
+                <svg viewBox="0 0 24 24">
+
+                    <circle cx="11"
+                            cy="11"
+                            r="6.5">
+                    </circle>
+
+                    <line x1="16"
+                          y1="16"
+                          x2="21"
+                          y2="21">
+                    </line>
+
+                </svg>
+
+            </button>
+
+
+            <!-- ACCOUNT -->
+
+            <button class="icon-button"
+                    aria-label="Account">
+
+                <svg viewBox="0 0 24 24">
+
+                    <circle cx="12"
+                            cy="8"
+                            r="3.5">
+                    </circle>
+
+                    <path d="M5.5 20c.8-4 3-6 6.5-6s5.7 2 6.5 6">
+                    </path>
+
+                </svg>
+
+            </button>
+
+
+            <!-- CART -->
+
+            <a href="{% url 'cart' %}"
+   class="icon-button cart-button"
+   aria-label="Cart">
+
+    <svg viewBox="0 0 24 24">
+
+        <path d="M6 8h12l-1 12H7L6 8Z"></path>
+
+        <path d="M9 8a3 3 0 0 1 6 0"></path>
+
+    </svg>
+
+    <span class="cart-count">
+        0
+    </span>
+
+</a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     BREADCRUMB
+========================================================= -->
+
+<section class="breadcrumb-section">
+
+    <div class="breadcrumb">
+
+        <a href="{% url 'home' %}">
+
+            Home
+
+        </a>
+
+        <span> / </span>
+
+
+        {% if product.product_type %}
+
+            <a href="{% url 'product_type_products' product.product_type.slug %}">
+
+                {{ product.product_type.name }}
+
+            </a>
+
+            <span> / </span>
+
+        {% endif %}
+
+
+        <span class="current-page">
+
+            {{ product.name }}
+
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PRODUCT DETAILS
+========================================================= -->
+
+<main class="product-details-page">
+
+    <div class="product-details-container">
+
+
+        <!-- =================================================
+             LEFT — PRODUCT IMAGE
+        ================================================== -->
+
+        <section class="product-image-section">
+
+
+            <div class="main-product-image">
+
+                <img src="{{ product.image.url }}"
+                     alt="{{ product.name }}"
+                     id="mainProductImage">
+
+            </div>
+
+
+            <!-- IMAGE GALLERY -->
+
+            <div class="product-gallery">
+
+
+                <!-- MAIN IMAGE -->
+
+                <button type="button"
+                        class="gallery-thumbnail active"
+                        onclick="changeProductImage(
+                            '{{ product.image.url }}',
+                            this
+                        )">
+
+                    <img src="{{ product.image.url }}"
+                         alt="{{ product.name }}">
+
+                </button>
+
+
+                <!-- VARIANT IMAGES -->
+
+                {% for variant in product.variants.all %}
+
+                    {% if variant.image %}
+
+                        <button type="button"
+                                class="gallery-thumbnail"
+                                onclick="changeProductImage(
+                                    '{{ variant.image.url }}',
+                                    this
+                                )">
+
+                            <img src="{{ variant.image.url }}"
+                                 alt="{{ product.name }}">
+
+                        </button>
+
+                    {% endif %}
+
+                {% endfor %}
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RIGHT — PRODUCT INFORMATION
+        ================================================== -->
+
+        <section class="product-information">
+
+
+            <!-- CATEGORY -->
+
+            {% if product.product_type %}
+
+                <p class="product-category">
+
+                    {{ product.product_type.name }}
+
+                </p>
+
+            {% endif %}
+
+
+
+            <!-- PRODUCT NAME -->
+
+            <h1 class="product-title">
+
+                {{ product.name }}
+
+            </h1>
+
+
+
+            <!-- SLUG -->
+
+            <p class="product-slug">
+
+                Product ID:
+                {{ product.slug }}
+
+            </p>
+
+
+
+            <!-- PRICE -->
+
+            <div class="product-price">
+
+                <span>
+
+                    ₹{{ product.price }}
+
+                </span>
+
+            </div>
+
+
+
+            <!-- STOCK -->
+
+            <div class="product-stock">
+
+                {% if product.available and product.stock > 0 %}
+
+                    <span class="stock-status in-stock">
+
+                        IN STOCK
+
+                    </span>
+
+                    <span class="stock-number">
+
+                        {{ product.stock }} available
+
+                    </span>
+
+                {% else %}
+
+                    <span class="stock-status out-of-stock">
+
+                        OUT OF STOCK
+
+                    </span>
+
+                {% endif %}
+
+            </div>
+
+
+
+            <!-- DESCRIPTION -->
+
+            {% if product.description %}
+
+                <div class="product-description">
+
+                    <h2>
+
+                        Product Description
+
+                    </h2>
+
+
+                    <p>
+
+                        {{ product.description }}
+
+                    </p>
+
+                </div>
+
+            {% endif %}
+
+
+
+            <!-- CANCELLATION / RETURN -->
+
+            <div class="product-policy">
+
+                <span>
+
+                    Cancellation up to 24h
+
+                </span>
+
+                <span class="policy-divider">
+
+                    |
+
+                </span>
+
+                <span>
+
+                    7-day return
+
+                </span>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 QUANTITY
+            ================================================== -->
+
+            {% if product.available and product.stock > 0 %}
+
+                <div class="quantity-section">
+
+                    <h2>
+
+                        Quantity
+
+                    </h2>
+
+
+                    <div class="quantity-selector">
+
+
+                        <button type="button"
+                                class="quantity-btn"
+                                id="decreaseQuantity">
+
+                            −
+
+                        </button>
+
+
+                        <input type="number"
+                               id="productQuantity"
+                               value="1"
+                               min="1"
+                               max="{{ product.stock }}"
+                               readonly>
+
+
+                        <button type="button"
+                                class="quantity-btn"
+                                id="increaseQuantity">
+
+                            +
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+            {% endif %}
+
+
+
+            <!-- =================================================
+                 ACTION BUTTONS
+            ================================================== -->
+
+            <div class="product-actions">
+
+
+                {% if product.available and product.stock > 0 %}
+
+                    <button type="button"
+                            class="add-cart-btn">
+
+                        ADD TO CART
+
+                    </button>
+
+
+                    <button type="button"
+                            class="buy-now-btn">
+
+                        BUY NOW
+
+                    </button>
+
+
+                {% else %}
+
+                    <button type="button"
+                            class="disabled-btn"
+                            disabled>
+
+                        OUT OF STOCK
+
+                    </button>
+
+                {% endif %}
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RATING
+            ================================================== -->
+
+            <div class="rating-section">
+
+                <h2>
+
+                    Rating & Reviews
+
+                </h2>
+
+
+                <div class="rating-stars">
+
+                    ☆ ☆ ☆ ☆ ☆
+
+                </div>
+
+
+                <p>
+
+                    No reviews yet.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+
+                Kordiva
+
+            </div>
+
+            <p>
+
+                ROPE & HOME DECOR
+
+            </p>
+
+            <span>
+
+                Live beautifully, decor joyfully.
+
+            </span>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+
+                SHOP
+
+            </h4>
+
+
+            <a href="#">
+
+                Wall Hanging
+
+            </a>
+
+
+            <a href="#">
+
+                Dreamcatcher
+
+            </a>
+
+
+            <a href="#">
+
+                Plant Hanger
+
+            </a>
+
+
+            <a href="#">
+
+                Mirror
+
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+
+                QUICK LINKS
+
+            </h4>
+
+
+            <a href="{% url 'home' %}">
+
+                Home
+
+            </a>
+
+
+            <a href="#">
+
+                About Us
+
+            </a>
+
+
+            <a href="#">
+
+                Collection
+
+            </a>
+
+
+            <a href="{% url 'contact' %}">
+
+                Contact
+
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+
+                HELP
+
+            </h4>
+
+
+            <a href="#">
+
+                Shipping
+
+            </a>
+
+
+            <a href="#">
+
+                Returns
+
+            </a>
+
+
+            <a href="#">
+
+                Privacy Policy
+
+            </a>
+
+
+            <a href="#">
+
+                Terms & Conditions
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Kordiva. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- =========================================================
+     JAVASCRIPT
+     Quantity + Image Gallery
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   IMAGE GALLERY
+========================================================= */
+
+function changeProductImage(imageUrl, thumbnail) {
+
+    const mainImage =
+        document.getElementById('mainProductImage');
+
+    if (mainImage) {
+
+        mainImage.src = imageUrl;
+
+    }
+
+    const thumbnails =
+        document.querySelectorAll('.gallery-thumbnail');
+
+    thumbnails.forEach(function(item) {
+
+        item.classList.remove('active');
+
+    });
+
+    if (thumbnail) {
+
+        thumbnail.classList.add('active');
+
+    }
+
+}
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+const quantityInput =
+    document.getElementById('productQuantity');
+
+const increaseButton =
+    document.getElementById('increaseQuantity');
+
+const decreaseButton =
+    document.getElementById('decreaseQuantity');
+
+
+if (
+    quantityInput &&
+    increaseButton &&
+    decreaseButton
+) {
+
+
+    /* =====================================================
+       INCREASE
+    ===================================================== */
+
+    increaseButton.addEventListener(
+        'click',
+        function() {
+
+            const currentQuantity =
+                parseInt(quantityInput.value) || 1;
+
+            const maxQuantity =
+                parseInt(quantityInput.max) || 1;
+
+
+            if (currentQuantity < maxQuantity) {
+
+                quantityInput.value =
+                    currentQuantity + 1;
+
+            } else {
+
+                alert(
+                    `Only ${maxQuantity} item(s) are available in stock.\n\nOur stock is ${maxQuantity}.`
+                );
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       DECREASE
+    ===================================================== */
+
+    decreaseButton.addEventListener(
+        'click',
+        function() {
+
+            const currentQuantity =
+                parseInt(quantityInput.value) || 1;
+
+
+            if (currentQuantity > 1) {
+
+                quantityInput.value =
+                    currentQuantity - 1;
+
+            }
+
+        }
+    );
+
+}
+
+</script>
+
+
+<!-- =========================================================
+     PRODUCT DETAIL JAVASCRIPT
+========================================================= -->
+
+<script src="{% static 'products/product_detail.js' %}"></script>
+</script>
+<!-- JS -->
+<script src="{% static 'products/product_detail.js' %}"></script>
+
+</body>
+
+</html>

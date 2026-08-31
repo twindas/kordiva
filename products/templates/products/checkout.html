@@ -1,0 +1,355 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Kordiva</title>
+
+    <link rel="stylesheet" href="{% static 'products/checkout.css' %}">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         CHECKOUT PAGE
+    ========================================================== -->
+
+    <main class="checkout-page">
+
+        <!-- Page Heading -->
+        <div class="checkout-header">
+            <h1>Checkout</h1>
+            <p>Complete your details to place your order.</p>
+        </div>
+
+
+        <div class="checkout-container">
+
+
+            <!-- =====================================================
+                 LEFT SIDE
+            ====================================================== -->
+
+            <section class="checkout-left">
+
+
+                <!-- CUSTOMER INFORMATION -->
+
+                <div class="checkout-card">
+
+                    <h2>Customer Information</h2>
+
+                    <div class="form-grid">
+
+                        <div class="form-group full-width">
+                            <label for="fullName">Full Name</label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="full_name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="mobile">Mobile Number</label>
+
+                            <input
+                                type="tel"
+                                id="mobile"
+                                name="mobile"
+                                placeholder="Enter mobile number"
+                                maxlength="10"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">Email Address</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     DELIVERY ADDRESS
+                ================================================== -->
+
+                <div class="checkout-card">
+
+                    <h2>Delivery Address</h2>
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group full-width">
+
+                            <label for="address">
+                                Full Address
+                            </label>
+
+                            <textarea
+                                id="address"
+                                name="address"
+                                rows="4"
+                                placeholder="House / Flat No., Street, Area"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="city">
+                                City
+                            </label>
+
+                            <input
+                                type="text"
+                                id="city"
+                                name="city"
+                                placeholder="Enter city"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="state">
+                                State
+                            </label>
+
+                            <input
+                                type="text"
+                                id="state"
+                                name="state"
+                                placeholder="Enter state"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="pin">
+                                PIN Code
+                            </label>
+
+                            <input
+                                type="text"
+                                id="pin"
+                                name="pin"
+                                placeholder="6-digit PIN"
+                                maxlength="6"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PAYMENT METHOD
+                ================================================== -->
+
+                <div class="checkout-card">
+
+                    <h2>Payment Method</h2>
+
+
+                    <div class="payment-options">
+
+
+                        <!-- CASH ON DELIVERY -->
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment_method"
+                                value="cod"
+                                checked
+                            >
+
+                            <span class="payment-content">
+
+                                <strong>
+                                    Cash on Delivery
+                                </strong>
+
+                                <small>
+                                    Pay when your order is delivered.
+                                </small>
+
+                            </span>
+
+                        </label>
+
+
+
+                        <!-- ONLINE PAYMENT -->
+
+                        <label class="payment-option disabled">
+
+                            <input
+                                type="radio"
+                                name="payment_method"
+                                value="online"
+                                disabled
+                            >
+
+                            <span class="payment-content">
+
+                                <strong>
+                                    Online Payment
+                                </strong>
+
+                                <small>
+                                    Online payment will be available soon.
+                                </small>
+
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 RIGHT SIDE — ORDER SUMMARY
+            ====================================================== -->
+
+            <aside class="checkout-right">
+
+                <div class="order-summary">
+
+                    <h2>Order Summary</h2>
+
+
+                    <!-- CART ITEMS WILL COME HERE -->
+
+                    <div
+                        id="checkoutItems"
+                        class="checkout-items"
+                    >
+
+                        <!--
+                            Products from Cart will be
+                            loaded here using JavaScript.
+                        -->
+
+                    </div>
+
+
+
+                    <!-- PRICE DETAILS -->
+
+                    <div class="price-details">
+
+
+                        <div class="price-row">
+
+                            <span>Subtotal</span>
+
+                            <span id="checkoutSubtotal">
+                                ₹0.00
+                            </span>
+
+                        </div>
+
+
+                        <div class="price-row">
+
+                            <span>Delivery Charge</span>
+
+                            <span id="checkoutDelivery">
+                                ₹0.00
+                            </span>
+
+                        </div>
+
+
+                        <div class="price-divider"></div>
+
+
+                        <div class="price-row grand-total">
+
+                            <span>Grand Total</span>
+
+                            <span id="checkoutGrandTotal">
+                                ₹0.00
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PLACE ORDER -->
+
+                    <button
+                        type="button"
+                        id="placeOrderBtn"
+                        class="place-order-btn"
+                    >
+                        PLACE ORDER
+                    </button>
+
+
+                    <p class="secure-checkout">
+                        🔒 Your information is secure.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================================
+         CHECKOUT JAVASCRIPT
+    ========================================================== -->
+
+    <script src="{% static 'products/checkout.js' %}"></script>
+
+</body>
+</html>

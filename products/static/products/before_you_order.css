@@ -1,0 +1,824 @@
+/* =========================================================
+   KORDIVA — BEFORE YOU ORDER
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #f8f2e9;
+    color: #43291d;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.before-order-page {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.before-order-hero {
+    min-height: 78vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 7% 90px;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(145, 91, 55, 0.12),
+            transparent 45%
+        ),
+        #f8f2e9;
+}
+
+
+.hero-label {
+    font-size: 12px;
+    letter-spacing: 9px;
+    font-weight: 600;
+
+    color: #9a5d3b;
+
+    margin-bottom: 28px;
+
+    animation: fadeDown 1s ease forwards;
+}
+
+
+.before-order-hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(58px, 8vw, 125px);
+
+    line-height: 0.92;
+
+    font-weight: 400;
+
+    letter-spacing: -5px;
+
+    color: #43291d;
+
+    animation: heroReveal 1.2s ease forwards;
+}
+
+
+.before-order-hero h1 span {
+    color: #9b5d3b;
+    font-style: italic;
+}
+
+
+.before-order-hero p {
+    max-width: 600px;
+
+    margin-top: 38px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #74584a;
+
+    animation: fadeUp 1.3s ease forwards;
+}
+
+
+.hero-line {
+    width: 90px;
+    height: 1px;
+
+    margin-top: 45px;
+
+    background: #b9825d;
+
+    position: relative;
+
+    animation: lineGrow 1.5s ease forwards;
+}
+
+
+.hero-line::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #9b5d3b;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    box-shadow:
+        0 0 12px rgba(155, 93, 59, 0.7),
+        0 0 25px rgba(155, 93, 59, 0.4);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro-section {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 110px 30px 90px;
+
+    text-align: center;
+}
+
+
+.section-label,
+.promise-label {
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    font-weight: 700;
+
+    color: #a26847;
+
+    margin-bottom: 24px;
+}
+
+
+.intro-section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(38px, 5vw, 64px);
+
+    line-height: 1.05;
+
+    font-weight: 400;
+
+    color: #43291d;
+}
+
+
+.intro-section p {
+    max-width: 680px;
+
+    margin: 32px auto 0;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    color: #765b4c;
+}
+
+
+/* =========================================================
+   INFORMATION LIST
+========================================================= */
+
+.information-list {
+    width: min(1100px, 90%);
+
+    margin: 0 auto;
+
+    padding-bottom: 100px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 70px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.info-card {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 40px;
+
+    padding: 55px 60px;
+
+    background: #fffaf3;
+
+    border: 1px solid rgba(104, 65, 43, 0.16);
+
+    border-radius: 3px;
+
+    box-shadow:
+        0 20px 55px rgba(67, 41, 29, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease,
+        border-color 0.5s ease;
+}
+
+
+/* moving shine */
+
+.info-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(255, 255, 255, 0.55),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    animation: shine 4.5s infinite;
+}
+
+
+.info-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    pointer-events: none;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(168, 111, 76, 0.05);
+
+    animation: softGlow 3s ease-in-out infinite;
+}
+
+
+.info-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(155, 93, 59, 0.4);
+
+    box-shadow:
+        0 25px 65px rgba(67, 41, 29, 0.13),
+        0 0 28px rgba(173, 111, 75, 0.12);
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.card-number {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #4a2c1e;
+
+    color: #f8e7d5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+        0 0 0 8px rgba(155, 93, 59, 0.06),
+        0 0 25px rgba(155, 93, 59, 0.18);
+
+    animation: numberGlow 3s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.card-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+.card-label {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #a26847;
+
+    font-weight: 700;
+}
+
+
+.card-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.05;
+
+    font-weight: 400;
+
+    margin-top: 15px;
+
+    color: #43291d;
+}
+
+
+.card-content p {
+    max-width: 720px;
+
+    margin-top: 25px;
+
+    font-size: 15px;
+
+    line-height: 1.85;
+
+    color: #765b4c;
+}
+
+
+/* =========================================================
+   PROMISE SECTION
+========================================================= */
+
+.promise-section {
+    position: relative;
+
+    min-height: 650px;
+
+    padding: 110px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background: #4a2c1e;
+
+    color: #f9eee1;
+}
+
+
+.promise-glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(188, 125, 82, 0.13);
+
+    filter: blur(80px);
+
+    animation: promiseGlow 5s ease-in-out infinite;
+}
+
+
+.promise-label {
+    position: relative;
+
+    color: #d7a37d;
+}
+
+
+.promise-mark {
+    position: relative;
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+
+.promise-section h2 {
+    position: relative;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 6vw, 78px);
+
+    line-height: 1.05;
+
+    font-weight: 400;
+}
+
+
+.promise-section h2 span {
+    color: #d39b73;
+
+    font-style: italic;
+}
+
+
+.promise-section p {
+    position: relative;
+
+    margin-top: 35px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    color: #ead5c2;
+}
+
+
+.promise-line {
+    position: relative;
+
+    width: 100px;
+
+    height: 1px;
+
+    background: #b9825d;
+
+    margin-top: 45px;
+}
+
+
+/* =========================================================
+   BACK
+========================================================= */
+
+.back-section {
+    padding: 45px 7%;
+
+    background: #f8f2e9;
+}
+
+
+.back-home {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: #573426;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.back-home span {
+    font-size: 20px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.back-home:hover {
+    color: #a05f3c;
+}
+
+
+.back-home:hover span {
+    transform: translateX(-6px);
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal-left,
+.reveal-right {
+    opacity: 0;
+
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.22, .61, .36, 1);
+}
+
+
+.reveal-left {
+    transform: translateX(-100px);
+}
+
+
+.reveal-right {
+    transform: translateX(100px);
+}
+
+
+.reveal-left.visible,
+.reveal-right.visible {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes heroReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(45px);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes lineGrow {
+
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 90px;
+        opacity: 1;
+    }
+}
+
+
+@keyframes shine {
+
+    0% {
+        left: -120%;
+    }
+
+    55% {
+        left: 140%;
+    }
+
+    100% {
+        left: 140%;
+    }
+}
+
+
+@keyframes softGlow {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+        box-shadow:
+            inset 0 0 25px rgba(178, 117, 79, 0.08);
+    }
+}
+
+
+@keyframes numberGlow {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 8px rgba(155, 93, 59, 0.06),
+            0 0 20px rgba(155, 93, 59, 0.15);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 8px rgba(155, 93, 59, 0.08),
+            0 0 35px rgba(155, 93, 59, 0.35);
+    }
+}
+
+
+@keyframes promiseGlow {
+
+    0%,
+    100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 0.9;
+    }
+}
+
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.25) rotate(12deg);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .before-order-hero {
+        min-height: 70vh;
+
+        padding: 90px 25px 70px;
+    }
+
+
+    .hero-label {
+        letter-spacing: 6px;
+    }
+
+
+    .before-order-hero h1 {
+        letter-spacing: -2px;
+    }
+
+
+    .before-order-hero p {
+        font-size: 15px;
+    }
+
+
+    .intro-section {
+        padding: 80px 25px 65px;
+    }
+
+
+    .intro-section h2 {
+        font-size: 38px;
+    }
+
+
+    .information-list {
+        width: 92%;
+
+        gap: 35px;
+
+        padding-bottom: 70px;
+    }
+
+
+    .info-card {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 40px 28px;
+    }
+
+
+    .card-number {
+        width: 60px;
+        height: 60px;
+
+        font-size: 17px;
+    }
+
+
+    .card-content h2 {
+        font-size: 34px;
+    }
+
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+
+    .promise-section {
+        min-height: 520px;
+
+        padding: 80px 25px;
+    }
+
+
+    .promise-section h2 {
+        font-size: 43px;
+    }
+
+
+    .promise-section p {
+        font-size: 17px;
+    }
+
+
+    .back-section {
+        padding: 35px 7%;
+    }
+
+}

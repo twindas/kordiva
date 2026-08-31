@@ -1,0 +1,706 @@
+/* =========================================================
+   KORDIVA — ORDER TRACKING
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #faf6ef;
+
+    color: #3f281c;
+
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.tracking-page {
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 70px 20px 80px;
+
+}
+
+
+.tracking-container {
+
+    width: 100%;
+    max-width: 1120px;
+
+    margin: auto;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.tracking-heading {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+.tracking-label {
+
+    display: block;
+
+    font-size: 12px;
+
+    letter-spacing: 7px;
+
+    font-weight: 600;
+
+    color: #986d4f;
+
+    margin-bottom: 14px;
+
+}
+
+
+.tracking-heading h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: 58px;
+
+    font-weight: 400;
+
+    color: #3f281c;
+
+    margin-bottom: 15px;
+
+}
+
+
+.tracking-heading p {
+
+    font-size: 16px;
+
+    color: #806957;
+
+}
+
+
+/* =========================================================
+   SEARCH CARD
+========================================================= */
+
+.tracking-search-card {
+
+    max-width: 800px;
+
+    margin: 0 auto 40px;
+
+    padding: 30px;
+
+    background: #fffdf9;
+
+    border: 1px solid #eadbca;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(63, 40, 28, 0.07);
+
+}
+
+
+.tracking-search-card label {
+
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    color: #986d4f;
+
+    margin-bottom: 12px;
+
+}
+
+
+.tracking-search {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+.tracking-search input {
+
+    flex: 1;
+
+    height: 52px;
+
+    padding: 0 18px;
+
+    border: 1px solid #d8c4ae;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #3f281c;
+
+    font-size: 15px;
+
+    outline: none;
+
+}
+
+
+.tracking-search input:focus {
+
+    border-color: #7b4b31;
+
+}
+
+
+.tracking-search button {
+
+    height: 52px;
+
+    padding: 0 28px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #3f281c;
+
+    color: white;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+}
+
+
+.tracking-search button:hover {
+
+    background: #5a3827;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.tracking-error {
+
+    margin-top: 15px;
+
+    padding: 13px 16px;
+
+    border-radius: 8px;
+
+    background: #f8e7df;
+
+    color: #8b3e2f;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   ORDER RESULT
+========================================================= */
+
+.order-result {
+
+    background: #fffdf9;
+
+    border: 1px solid #eadbca;
+
+    border-radius: 22px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 20px 50px rgba(63, 40, 28, 0.08);
+
+}
+
+
+/* =========================================================
+   RESULT HEADER
+========================================================= */
+
+.result-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #eadfd5;
+
+}
+
+
+.result-header span {
+
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #a47b5d;
+
+    margin-bottom: 8px;
+
+}
+
+
+.result-header h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+}
+
+
+.current-status {
+
+    padding: 9px 18px;
+
+    border-radius: 30px;
+
+    background: #f3e8da;
+
+    color: #77492f;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =========================================================
+   ORDER INFO
+========================================================= */
+
+.result-info {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #eadfd5;
+
+}
+
+
+.result-info span {
+
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #a47b5d;
+
+    margin-bottom: 8px;
+
+}
+
+
+.result-info strong {
+
+    font-size: 14px;
+
+    color: #3f281c;
+
+}
+
+
+/* =========================================================
+   TRACKING SECTION
+========================================================= */
+
+.tracking-section {
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid #eadfd5;
+
+}
+
+
+.tracking-section h3,
+.tracked-items h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.tracking-timeline {
+
+    position: relative;
+
+}
+
+
+.tracking-step {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    position: relative;
+
+    min-height: 78px;
+
+}
+
+
+.tracking-step:not(:last-child)::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 17px;
+
+    top: 36px;
+
+    width: 2px;
+
+    height: 55px;
+
+    background: #e4d8cc;
+
+}
+
+
+.step-dot {
+
+    width: 36px;
+
+    height: 36px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    border: 1px solid #d9c7b5;
+
+    background: #fffdf9;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #b9a696;
+
+    font-size: 13px;
+
+    z-index: 2;
+
+}
+
+
+.tracking-step.completed .step-dot {
+
+    background: #3f281c;
+
+    border-color: #3f281c;
+
+    color: white;
+
+}
+
+
+.tracking-step.completed:not(:last-child)::after {
+
+    background: #3f281c;
+
+}
+
+
+.step-content {
+
+    padding-top: 2px;
+
+}
+
+
+.step-content strong {
+
+    display: block;
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.step-content span {
+
+    display: block;
+
+    font-size: 13px;
+
+    color: #8b7666;
+
+}
+
+
+/* =========================================================
+   ITEMS
+========================================================= */
+
+.tracked-items {
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid #eadfd5;
+
+}
+
+
+.tracked-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 17px 0;
+
+    border-bottom: 1px dashed #e3d6ca;
+
+}
+
+
+.tracked-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.tracked-item strong {
+
+    display: block;
+
+    font-size: 14px;
+
+}
+
+
+.tracked-item span {
+
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 13px;
+
+    color: #907a69;
+
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+.tracked-total {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-top: 28px;
+
+}
+
+
+.tracked-total span {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #986d4f;
+
+}
+
+
+.tracked-total strong {
+
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+}
+
+
+/* =========================================================
+   BACK ACCOUNT
+========================================================= */
+
+.back-account {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    color: #5a3827;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.back-account:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .tracking-page {
+
+        padding: 45px 15px 60px;
+
+    }
+
+
+    .tracking-heading h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .tracking-search {
+
+        flex-direction: column;
+
+    }
+
+
+    .tracking-search button {
+
+        width: 100%;
+
+    }
+
+
+    .order-result {
+
+        padding: 22px;
+
+    }
+
+
+    .result-header {
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+    }
+
+
+    .result-info {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    .tracked-total strong {
+
+        font-size: 24px;
+
+    }
+
+}

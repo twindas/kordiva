@@ -1,0 +1,687 @@
+/* =========================================================
+   KORDIVA — SAVED ADDRESS
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f8f3eb;
+
+    color: #3f281c;
+
+    min-height: 100vh;
+
+}
+
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.saved-address-page {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding:
+        70px 20px
+        80px;
+
+}
+
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.saved-address-container {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+}
+
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.saved-address-heading {
+
+    text-align: center;
+
+    margin-bottom: 48px;
+
+}
+
+
+.address-label {
+
+    display: block;
+
+    font-size: 12px;
+
+    letter-spacing: 7px;
+
+    font-weight: 600;
+
+    color: #9b6542;
+
+    margin-bottom: 15px;
+
+}
+
+
+.saved-address-heading h1 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 58px;
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    color: #3f281c;
+
+    margin-bottom: 15px;
+
+}
+
+
+.saved-address-heading p {
+
+    font-size: 16px;
+
+    color: #7b6659;
+
+    line-height: 1.6;
+
+}
+
+
+
+/* =========================================================
+   ADDRESS CARD
+========================================================= */
+
+.address-card {
+
+    background: #ffffff;
+
+    border: 1px solid #eaded1;
+
+    border-radius: 22px;
+
+    padding: 42px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(63, 40, 28, 0.07);
+
+}
+
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.address-card-header {
+
+    padding-bottom: 28px;
+
+    margin-bottom: 30px;
+
+    border-bottom:
+        1px solid #eee3d9;
+
+}
+
+
+.section-label {
+
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #a06c49;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+
+}
+
+
+.address-card-header h2 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 28px;
+
+    font-weight: 400;
+
+    color: #3f281c;
+
+}
+
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.address-error {
+
+    background: #fff1ed;
+
+    border:
+        1px solid #e5b8aa;
+
+    color: #9c3928;
+
+    padding: 14px 16px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.address-form {
+
+    width: 100%;
+
+}
+
+
+.form-group {
+
+    margin-bottom: 24px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #4b3528;
+
+    margin-bottom: 9px;
+
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    border:
+        1px solid #d9c9bb;
+
+    border-radius: 9px;
+
+    background: #fdfaf6;
+
+    color: #3f281c;
+
+    padding:
+        14px 15px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 110px;
+
+    line-height: 1.6;
+
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #a99a90;
+
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: #8b5739;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(139, 87, 57, 0.08);
+
+}
+
+
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+
+}
+
+
+
+/* =========================================================
+   SAVE BUTTON
+========================================================= */
+
+.save-address-btn {
+
+    width: 100%;
+
+    min-height: 58px;
+
+    margin-top: 8px;
+
+    border: 1px solid #3f281c;
+
+    border-radius: 8px;
+
+    background: #3f281c;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.save-address-btn:hover {
+
+    background: #563827;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 22px
+        rgba(63, 40, 28, 0.18);
+
+}
+
+
+.save-address-btn:active {
+
+    transform:
+        translateY(0);
+
+}
+
+
+.save-arrow {
+
+    font-size: 19px;
+
+    line-height: 1;
+
+}
+
+
+
+/* =========================================================
+   SAVED PREVIEW
+========================================================= */
+
+.saved-preview {
+
+    margin-top: 28px;
+
+    background: #fffdf9;
+
+    border:
+        1px solid #eaded1;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 30px
+        rgba(63, 40, 28, 0.04);
+
+}
+
+
+
+/* =========================================================
+   PREVIEW HEADER
+========================================================= */
+
+.preview-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        18px 24px;
+
+    border-bottom:
+        1px solid #eee3d9;
+
+}
+
+
+.preview-header > span:first-child {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    color: #8c6045;
+
+}
+
+
+.saved-badge {
+
+    padding:
+        6px 12px;
+
+    border-radius: 30px;
+
+    background: #efe4d7;
+
+    color: #68452f;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+
+/* =========================================================
+   PREVIEW CONTENT
+========================================================= */
+
+.preview-content {
+
+    padding: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.preview-content strong {
+
+    font-size: 17px;
+
+    color: #3f281c;
+
+}
+
+
+.preview-content span {
+
+    font-size: 14px;
+
+    color: #735d4e;
+
+}
+
+
+.preview-content p {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #59483d;
+
+    margin:
+        7px 0 2px;
+
+}
+
+
+
+/* =========================================================
+   BACK TO ACCOUNT
+========================================================= */
+
+.back-account {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 30px;
+
+    color: #593a28;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        gap 0.25s ease,
+        color 0.25s ease;
+
+}
+
+
+.back-account:hover {
+
+    gap: 12px;
+
+    color: #8b5739;
+
+}
+
+
+.back-account span {
+
+    font-size: 18px;
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .saved-address-page {
+
+        padding:
+            45px 15px
+            60px;
+
+    }
+
+
+    .saved-address-heading {
+
+        margin-bottom: 32px;
+
+    }
+
+
+    .saved-address-heading h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .address-card {
+
+        padding: 25px 20px;
+
+        border-radius: 17px;
+
+    }
+
+
+    .address-card-header h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+
+    .preview-content {
+
+        padding: 20px;
+
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .saved-address-heading h1 {
+
+        font-size: 35px;
+
+    }
+
+
+    .address-label {
+
+        letter-spacing: 5px;
+
+    }
+
+
+    .address-card {
+
+        padding: 22px 16px;
+
+    }
+
+}

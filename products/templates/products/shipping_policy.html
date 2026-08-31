@@ -1,0 +1,111 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Shipping Policy | Kordiva</title>
+
+    <link rel="stylesheet"
+          href="{% static 'products/policy.css' %}">
+
+</head>
+
+<body>
+
+<section class="policy-page">
+
+    <div class="policy-container">
+
+        <div class="policy-header">
+
+            <p class="policy-small-title">
+                KORDIVA
+            </p>
+
+            <h1>Shipping Policy</h1>
+
+            <p>
+                Delivered with care.
+            </p>
+
+            <div class="policy-divider">
+                ♣
+            </div>
+
+        </div>
+
+
+        <div class="policy-card">
+
+            <h2>Order Processing</h2>
+
+            <p>
+                Once your order is confirmed, we begin preparing your
+                handmade products for dispatch. Handmade items may require
+                additional preparation time.
+            </p>
+
+
+            <h2>Delivery Time</h2>
+
+            <p>
+                Delivery time may vary depending on your location,
+                product availability and the delivery service used.
+                Estimated delivery information will be communicated
+                whenever applicable.
+            </p>
+
+
+            <h2>Delivery Charges</h2>
+
+            <p>
+                Delivery charges may vary depending on the order and
+                destination. Any applicable delivery charge will be
+                displayed before checkout or communicated during order
+                confirmation.
+            </p>
+
+
+            <h2>Delivery Address</h2>
+
+            <p>
+                Please make sure that your delivery address, phone number
+                and other contact details are correct before placing
+                your order.
+            </p>
+
+
+            <h2>Delayed Deliveries</h2>
+
+            <p>
+                Delivery may occasionally be delayed due to weather,
+                transportation issues, festive periods or circumstances
+                beyond our control.
+            </p>
+
+
+            <h2>Need Help?</h2>
+
+            <p>
+                If you have any questions regarding your delivery,
+                please contact us with your order details.
+            </p>
+
+        </div>
+
+
+        <a href="{% url 'home' %}" class="back-home">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</section>
+
+</body>
+</html>

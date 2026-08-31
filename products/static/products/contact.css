@@ -1,0 +1,729 @@
+/* =====================================================
+   KORDIVA - BULK & CUSTOM ORDERS
+   ===================================================== */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #21160f;
+    color: #dfc8a9;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =====================================================
+   PAGE
+   ===================================================== */
+
+.page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(77, 52, 33, 0.17),
+            transparent 45%
+        ),
+        #21160f;
+
+    overflow: hidden;
+}
+
+
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.navbar {
+    width: 100%;
+    height: 95px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 6%;
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* ---------- BRAND ---------- */
+
+.brand {
+    width: 220px;
+
+    position: relative;
+
+    text-align: left;
+}
+
+
+.brand-symbol {
+    font-size: 25px;
+
+    line-height: 20px;
+
+    color: #d7ba95;
+
+    margin-bottom: 4px;
+
+    transform: rotate(-20deg);
+}
+
+
+.brand-name {
+    font-size: 21px;
+
+    letter-spacing: 1px;
+
+    color: #e2c7a6;
+}
+
+
+.brand-subtitle {
+    font-size: 7px;
+
+    letter-spacing: 1.6px;
+
+    margin-top: 3px;
+
+    color: #bca487;
+}
+
+
+
+/* ---------- NAV LINKS ---------- */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 42px;
+
+    flex: 1;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #dbc3a5;
+
+    font-size: 11px;
+
+    letter-spacing: 0.4px;
+
+    position: relative;
+
+    padding: 13px 0;
+}
+
+
+.nav-links a:hover {
+    color: #fff0d8;
+}
+
+
+.nav-links .active {
+    color: #ead3b3;
+}
+
+
+.nav-links .active span {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+
+    height: 1px;
+
+    background: #a98d69;
+}
+
+
+
+/* ---------- NAV ICONS ---------- */
+
+.nav-icons {
+    width: 100px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 22px;
+
+    color: #dec5a4;
+}
+
+
+.user-icon,
+.bag-icon {
+    font-size: 24px;
+
+    font-family: serif;
+
+    transform: scaleX(0.9);
+}
+
+
+
+/* =====================================================
+   MAIN CONTENT
+   ===================================================== */
+
+.main-content {
+    width: 100%;
+
+    max-width: 980px;
+
+    margin: 0 auto;
+
+    padding: 15px 0 60px;
+
+    position: relative;
+}
+
+
+
+/* =====================================================
+   TOP DECORATION
+   ===================================================== */
+
+.top-decoration {
+    text-align: center;
+
+    color: #cfb08b;
+
+    font-size: 34px;
+
+    height: 50px;
+
+    transform: rotate(-15deg);
+
+    opacity: 0.9;
+}
+
+
+
+/* =====================================================
+   HEADING
+   ===================================================== */
+
+.main-content h1 {
+    text-align: center;
+
+    font-size: 40px;
+
+    font-weight: 400;
+
+    line-height: 1.08;
+
+    letter-spacing: 2px;
+
+    color: #d8bb96;
+
+    margin-top: 4px;
+}
+
+
+.tagline {
+    text-align: center;
+
+    font-size: 18px;
+
+    margin-top: 12px;
+
+    color: #d1b99b;
+}
+
+
+.small-divider {
+    width: 90px;
+
+    height: 25px;
+
+    margin: 7px auto 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    color: #c9a985;
+}
+
+
+.small-divider::before,
+.small-divider::after {
+    content: "";
+
+    width: 30px;
+
+    height: 1px;
+
+    background: #856e53;
+}
+
+
+.small-divider span {
+    margin: 0 8px;
+
+    font-size: 15px;
+}
+
+
+
+/* =====================================================
+   ORDER CARDS
+   ===================================================== */
+
+.order-card {
+    width: 82%;
+
+    min-height: 135px;
+
+    margin: 0 0 10px 4%;
+
+    border: 1px solid #6c5640;
+
+    background: rgba(33, 22, 15, 0.55);
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    z-index: 3;
+
+    transition: 0.3s ease;
+}
+
+
+.order-card:hover {
+    border-color: #a58a69;
+
+    background: rgba(44, 29, 19, 0.7);
+}
+
+
+
+/* =====================================================
+   CARD ICON
+   ===================================================== */
+
+.card-icon {
+    width: 145px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.icon-circle {
+    width: 82px;
+
+    height: 82px;
+
+    border-radius: 50%;
+
+    border: 1px solid #a08564;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #d8bc97;
+
+    font-size: 37px;
+}
+
+
+.icon-circle.clock {
+    font-size: 40px;
+}
+
+
+
+/* =====================================================
+   CARD CONTENT
+   ===================================================== */
+
+.card-content {
+    padding: 21px 20px 21px 10px;
+}
+
+
+.card-content h2 {
+    font-size: 18px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.4px;
+
+    color: #dec6a6;
+
+    margin-bottom: 10px;
+}
+
+
+.card-content p {
+    color: #d2bda1;
+
+    font-size: 14px;
+
+    line-height: 1.35;
+
+    letter-spacing: 0.1px;
+}
+
+
+.card-content .email {
+    margin-top: 2px;
+
+    margin-bottom: 5px;
+
+    font-size: 15px;
+
+    color: #e0c6a4;
+}
+
+
+
+/* =====================================================
+   DECOR IMAGE
+   ===================================================== */
+
+.decor-image {
+    position: absolute;
+
+    width: 470px;
+
+    right: -32px;
+
+    bottom: 45px;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+.decor-image img {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    opacity: 0.92;
+
+    mix-blend-mode: normal;
+}
+
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.footer {
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    padding-bottom: 30px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.footer-line {
+    width: 100%;
+
+    height: 1px;
+
+    background: #69533d;
+
+    margin-bottom: 15px;
+}
+
+
+.footer-symbol {
+    font-size: 26px;
+
+    color: #c5a883;
+
+    transform: rotate(-15deg);
+
+    margin-bottom: 4px;
+}
+
+
+.footer h3 {
+    font-size: 20px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    color: #d9bd9a;
+}
+
+
+.footer-subtitle {
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+
+    color: #ad9274;
+
+    margin-top: 3px;
+}
+
+
+.footer-message {
+    font-size: 14px;
+
+    margin-top: 25px;
+
+    color: #cbb398;
+}
+
+
+.heart {
+    font-size: 17px;
+
+    color: #e2c6a2;
+
+    margin-top: 7px;
+}
+
+
+
+/* =====================================================
+   RESPONSIVE - LAPTOP
+   ===================================================== */
+
+@media (max-width: 1200px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        gap: 27px;
+    }
+
+    .main-content {
+        max-width: 900px;
+    }
+
+    .order-card {
+        width: 84%;
+    }
+
+    .decor-image {
+        width: 430px;
+        right: -20px;
+    }
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE - TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 25px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .brand {
+        width: auto;
+    }
+
+
+    .nav-links {
+        order: 3;
+
+        width: 100%;
+
+        margin-top: 20px;
+
+        gap: 22px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .nav-icons {
+        margin-left: auto;
+    }
+
+
+    .main-content {
+        padding-top: 30px;
+    }
+
+
+    .order-card {
+        width: 90%;
+
+        margin-left: 5%;
+    }
+
+
+    .decor-image {
+        opacity: 0.35;
+
+        right: -80px;
+
+        bottom: 40px;
+    }
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 22px 18px;
+    }
+
+
+    .brand-name {
+        font-size: 18px;
+    }
+
+
+    .nav-links {
+        gap: 15px;
+
+        justify-content: space-between;
+    }
+
+
+    .nav-links a {
+        font-size: 9px;
+    }
+
+
+    .nav-icons {
+        width: auto;
+
+        gap: 12px;
+    }
+
+
+    .main-content h1 {
+        font-size: 30px;
+    }
+
+
+    .tagline {
+        font-size: 15px;
+    }
+
+
+    .order-card {
+        width: 92%;
+
+        margin-left: 4%;
+
+        min-height: 145px;
+    }
+
+
+    .card-icon {
+        width: 95px;
+    }
+
+
+    .icon-circle {
+        width: 60px;
+
+        height: 60px;
+
+        font-size: 27px;
+    }
+
+
+    .card-content {
+        padding: 18px 10px;
+    }
+
+
+    .card-content h2 {
+        font-size: 14px;
+    }
+
+
+    .card-content p {
+        font-size: 11px;
+    }
+
+
+    .decor-image {
+        width: 310px;
+
+        right: -90px;
+
+        bottom: 70px;
+
+        opacity: 0.22;
+    }
+
+
+    .footer {
+        margin-top: 20px;
+    }
+
+}

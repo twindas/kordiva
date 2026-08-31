@@ -1,0 +1,717 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Shop | Kordiva</title>
+
+    <link rel="stylesheet"
+          href="{% static 'products/shop.css' %}">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <!-- Left Navigation -->
+
+        <nav class="main-nav">
+
+            <a href="/">HOME</a>
+
+            <a href="#" class="active">SHOP</a>
+
+            <a href="#">ABOUT US</a>
+
+            <a href="#">COLLECTION</a>
+
+            <a href="#">CONTACT</a>
+
+        </nav>
+
+
+        <!-- Logo -->
+
+        <div class="logo">
+
+            <div class="logo-circle">
+                K
+            </div>
+
+            <h1>Kordiva</h1>
+
+            <span>ROPE & HOME DECOR</span>
+
+        </div>
+
+
+        <!-- Right Icons -->
+
+        <div class="header-actions">
+
+            <span class="search-icon">⌕</span>
+
+            <span class="user-icon">♙</span>
+
+            <span class="bag-icon">
+                ♡
+                <small>0</small>
+            </span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= SHOP HERO ================= -->
+
+<section class="shop-hero">
+
+    <div class="hero-line"></div>
+
+    <h2>SHOP ALL</h2>
+
+    <div class="hero-line"></div>
+
+    <p>
+        Discover handmade pieces crafted to bring warmth,
+        charm and character to your home.
+    </p>
+
+</section>
+
+
+
+<!-- ================= SHOP CONTENT ================= -->
+
+<section class="shop-section">
+
+
+    <!-- ===== TOP BAR ===== -->
+
+    <div class="shop-topbar">
+
+        <div class="product-count">
+            12 Products
+        </div>
+
+
+        <div class="view-buttons">
+
+            <button>Ⅱ</button>
+
+            <button>Ⅲ</button>
+
+            <button class="selected">▦</button>
+
+        </div>
+
+
+        <div class="sort-box">
+
+            <label for="sort">
+                SORT BY:
+            </label>
+
+            <select id="sort">
+
+                <option>Featured</option>
+
+                <option>Most Relevant</option>
+
+                <option>Price, Low to High</option>
+
+                <option>Price, High to Low</option>
+
+                <option>Name, A-Z</option>
+
+                <option>Name, Z-A</option>
+
+                <option>Newest</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ===== MAIN AREA ===== -->
+
+    <div class="shop-layout">
+
+
+        <!-- ================= FILTER SIDEBAR ================= -->
+
+        <aside class="filter-sidebar">
+
+
+            <h3>FILTER</h3>
+
+
+            <!-- Availability -->
+
+            <div class="filter-group">
+
+                <div class="filter-title">
+
+                    <span>AVAILABILITY</span>
+
+                    <span>⌄</span>
+
+                </div>
+
+
+                <label class="check-option">
+
+                    <input type="checkbox">
+
+                    <span>In Stock</span>
+
+                    <small>(10)</small>
+
+                </label>
+
+
+                <label class="check-option">
+
+                    <input type="checkbox">
+
+                    <span>Out of Stock</span>
+
+                    <small>(2)</small>
+
+                </label>
+
+            </div>
+
+
+
+            <!-- Price -->
+
+            <div class="filter-group">
+
+                <div class="filter-title">
+
+                    <span>PRICE</span>
+
+                    <span>⌄</span>
+
+                </div>
+
+
+                <div class="price-slider">
+
+                    <input type="range"
+                           min="0"
+                           max="2000"
+                           value="2000">
+
+                </div>
+
+
+                <div class="price-values">
+
+                    <div>
+                        ₹0
+                    </div>
+
+                    <div>
+                        ₹2000
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Category -->
+
+            <div class="filter-group">
+
+                <div class="filter-title">
+
+                    <span>CATEGORY</span>
+
+                    <span>⌄</span>
+
+                </div>
+
+
+                <label class="check-option">
+
+                    <input type="checkbox">
+
+                    <span>Wall Hanging</span>
+
+                </label>
+
+
+                <label class="check-option">
+
+                    <input type="checkbox">
+
+                    <span>Dreamcatcher</span>
+
+                </label>
+
+
+                <label class="check-option">
+
+                    <input type="checkbox">
+
+                    <span>Hanging Shelf</span>
+
+                </label>
+
+
+                <label class="check-option">
+
+                    <input type="checkbox">
+
+                    <span>Plant Hanger</span>
+
+                </label>
+
+
+                <label class="check-option">
+
+                    <input type="checkbox">
+
+                    <span>Mirror</span>
+
+                </label>
+
+
+                <label class="check-option">
+
+                    <input type="checkbox">
+
+                    <span>Photo Holder</span>
+
+                </label>
+
+
+                <label class="check-option">
+
+                    <input type="checkbox">
+
+                    <span>Keychain</span>
+
+                </label>
+
+
+                <label class="check-option">
+
+                    <input type="checkbox">
+
+                    <span>Hanging Basket</span>
+
+                </label>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- ================= PRODUCTS ================= -->
+
+        <main class="products-area">
+
+
+            <div class="product-grid">
+
+
+                <!-- PRODUCT 1 -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="{% static 'products/images/wall-hanging.jpg' %}"
+                             alt="Wall Hanging">
+
+                        <span class="product-badge">
+                            NEW
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            KORDIVA
+                        </p>
+
+                        <h3>
+                            Boho Angel Wing Wall Hanging
+                        </h3>
+
+                        <p class="product-price">
+                            ₹599.00
+                        </p>
+
+                        <button class="view-product">
+                            VIEW PRODUCT →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 2 -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="{% static 'products/images/dreamcatcher.jpg' %}"
+                             alt="Dreamcatcher">
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            KORDIVA
+                        </p>
+
+                        <h3>
+                            Moon Dream Catcher
+                        </h3>
+
+                        <p class="product-price">
+                            ₹699.00
+                        </p>
+
+                        <button class="view-product">
+                            VIEW PRODUCT →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 3 -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="{% static 'products/images/hanging-shelf.jpg' %}"
+                             alt="Hanging Shelf">
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            KORDIVA
+                        </p>
+
+                        <h3>
+                            Natural Rope Hanging Shelf
+                        </h3>
+
+                        <p class="product-price">
+                            ₹799.00
+                        </p>
+
+                        <button class="view-product">
+                            VIEW PRODUCT →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 4 -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="{% static 'products/images/plant-hanger.jpg' %}"
+                             alt="Plant Hanger">
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            KORDIVA
+                        </p>
+
+                        <h3>
+                            Handmade Rope Plant Hanger
+                        </h3>
+
+                        <p class="product-price">
+                            ₹649.00
+                        </p>
+
+                        <button class="view-product">
+                            VIEW PRODUCT →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 5 -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="{% static 'products/images/mirror.jpg' %}"
+                             alt="Rope Mirror">
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            KORDIVA
+                        </p>
+
+                        <h3>
+                            Rustic Rope Frame Mirror
+                        </h3>
+
+                        <p class="product-price">
+                            ₹899.00
+                        </p>
+
+                        <button class="view-product">
+                            VIEW PRODUCT →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 6 -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="{% static 'products/images/keychain.jpg' %}"
+                             alt="Rope Keychain">
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            KORDIVA
+                        </p>
+
+                        <h3>
+                            Handmade Rope Keychain
+                        </h3>
+
+                        <p class="product-price">
+                            ₹299.00
+                        </p>
+
+                        <button class="view-product">
+                            VIEW PRODUCT →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 7 -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="{% static 'products/images/hanging-basket.jpg' %}"
+                             alt="Hanging Basket">
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            KORDIVA
+                        </p>
+
+                        <h3>
+                            Natural Rope Hanging Basket
+                        </h3>
+
+                        <p class="product-price">
+                            ₹749.00
+                        </p>
+
+                        <button class="view-product">
+                            VIEW PRODUCT →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 8 -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="{% static 'products/images/wall-hanging.jpg' %}"
+                             alt="Macrame Wall Decor">
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            KORDIVA
+                        </p>
+
+                        <h3>
+                            Natural Macramé Wall Decor
+                        </h3>
+
+                        <p class="product-price">
+                            ₹899.00
+                        </p>
+
+                        <button class="view-product">
+                            VIEW PRODUCT →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <div>
+
+            <h2>Kordiva</h2>
+
+            <p>
+                Handmade rope & home decor,
+                created with warmth and care.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>SHOP</h4>
+
+            <a href="#">Wall Hanging</a>
+
+            <a href="#">Dreamcatcher</a>
+
+            <a href="#">Plant Hanger</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>QUICK LINKS</h4>
+
+            <a href="#">Home</a>
+
+            <a href="#">About Us</a>
+
+            <a href="#">Contact</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>HELP</h4>
+
+            <a href="#">Shipping</a>
+
+            <a href="#">Returns</a>
+
+            <a href="#">FAQs</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Kordiva — Rope & Home Decor
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

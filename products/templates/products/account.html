@@ -1,0 +1,289 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Account | Kordiva</title>
+
+    <link rel="stylesheet"
+          href="{% static 'products/account.css' %}">
+
+</head>
+
+
+<body>
+
+
+<section class="account-page">
+
+    <div class="account-container">
+
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+        <div class="account-heading">
+
+            <span class="account-label">
+                K O R D I V A
+            </span>
+
+            <h1>
+                Customer Account
+            </h1>
+
+            <p>
+                Welcome to your personal space.
+                Manage your account and orders with ease.
+            </p>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             MAIN ACCOUNT CARD
+        ====================================================== -->
+
+        <div class="account-card">
+
+
+            <!-- Account Icon -->
+
+            <div class="account-icon">
+
+                <svg viewBox="0 0 24 24">
+
+                    <circle
+                        cx="12"
+                        cy="8"
+                        r="3.5">
+                    </circle>
+
+                    <path
+                        d="M5.5 20c.8-4 3-6 6.5-6s5.7 2 6.5 6">
+                    </path>
+
+                </svg>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 LOGGED-IN USER
+            ================================================== -->
+
+            {% if user.is_authenticated %}
+
+                <span class="account-status">
+                    WELCOME BACK
+                </span>
+
+                <h2>
+                    Welcome, {{ user.username }}
+                </h2>
+
+                <p class="account-description">
+                    Your Kordiva account is ready.
+                    Manage your orders, delivery details
+                    and account information below.
+                </p>
+
+
+                <!-- ACCOUNT OPTIONS -->
+
+                <div class="account-actions">
+
+
+                    <!-- My Orders -->
+
+                    <a href="{% url 'my_orders' %}"
+                        class="account-option">
+
+                        <span class="option-number">
+                            01
+                        </span>
+
+                        <span class="option-content">
+
+                            <strong>
+                                My Orders
+                            </strong>
+
+                            <small>
+                                View and manage your previous orders.
+                            </small>
+
+                        </span>
+
+                        <span class="option-arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- Order Tracking -->
+
+                    <a href="{% url 'order_tracking' %}"
+                            class="account-option">
+
+                        <span class="option-number">
+                            02
+                        </span>
+
+                        <span class="option-content">
+
+                            <strong>
+                                Order Tracking
+                            </strong>
+
+                            <small>
+                                Keep track of your deliveries.
+                            </small>
+
+                        </span>
+
+                        <span class="option-arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- Saved Address -->
+
+                    <a href="{% url 'saved_address' %}"
+                            class="account-option">
+
+                        <span class="option-number">
+                            03
+                        </span>
+
+                        <span class="option-content">
+
+                            <strong>
+                                Saved Address
+                            </strong>
+
+                            <small>
+                                Manage your delivery information.
+                            </small>
+
+                        </span>
+
+                        <span class="option-arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- LOGOUT -->
+
+                <a href="{% url 'logout' %}"
+                   class="logout-btn">
+
+                    <span>
+                        LOGOUT
+                    </span>
+
+                    <span class="logout-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+            <!-- =================================================
+                 LOGGED-OUT USER
+            ================================================== -->
+
+            {% else %}
+
+                <span class="account-status">
+                    KORDIVA MEMBERSHIP
+                </span>
+
+                <h2>
+                    Your Kordiva Account
+                </h2>
+
+                <p class="account-description">
+                    Login to your account or create
+                    a new account to continue.
+                </p>
+
+
+                <!-- LOGIN / SIGNUP -->
+
+                <div class="account-actions guest-actions">
+
+
+                    <!-- LOGIN -->
+
+                    <a href="{% url 'login' %}"
+                       class="account-btn login-btn">
+
+                        LOGIN
+
+                    </a>
+
+
+
+                    <!-- CREATE ACCOUNT -->
+
+                    <a href="{% url 'signup' %}"
+                       class="account-btn signup-btn">
+
+                        CREATE ACCOUNT
+
+                    </a>
+
+                </div>
+
+
+            {% endif %}
+
+
+        </div>
+
+        <!-- =====================================================
+             BACK TO HOME
+        ====================================================== -->
+
+        <a href="{% url 'home' %}"
+           class="back-home">
+
+            <span class="back-arrow">
+                ←
+            </span>
+
+            Back to Home
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+</body>
+
+</html>

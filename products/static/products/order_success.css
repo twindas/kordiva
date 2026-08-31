@@ -1,0 +1,624 @@
+/* =========================================================
+   KORDIVA — ORDER SUCCESS PAGE
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #faf6ef;
+
+    color: #3f281c;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SUCCESS PAGE
+========================================================= */
+
+.order-success-page {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 70px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.order-success-container {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    background: #ffffff;
+
+    padding: 55px 60px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(63, 40, 28, 0.10);
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   SUCCESS ICON
+========================================================= */
+
+.success-icon {
+
+    width: 78px;
+
+    height: 78px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    background: #4a2d1e;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 42px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.success-small-title {
+
+    font-size: 12px;
+
+    letter-spacing: 2.5px;
+
+    color: #8a6249;
+
+    margin-bottom: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.order-success-container h1 {
+
+    font-size: 36px;
+
+    line-height: 1.2;
+
+    color: #3f281c;
+
+    margin-bottom: 18px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SUCCESS MESSAGE
+========================================================= */
+
+.success-message {
+
+    max-width: 600px;
+
+    margin: 0 auto 35px;
+
+    color: #765d4d;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ORDER ID
+========================================================= */
+
+.order-id-box {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: #faf6ef;
+
+    border: 1px solid #eaded3;
+
+    padding: 18px 22px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    text-align: left;
+}
+
+
+.order-id-box span {
+
+    font-size: 14px;
+
+    color: #765d4d;
+}
+
+
+.order-id-box strong {
+
+    font-size: 18px;
+
+    color: #4a2d1e;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   COMMON CARD SECTIONS
+========================================================= */
+
+.order-details,
+.ordered-items,
+.delivery-address {
+
+    margin-top: 22px;
+
+    padding: 28px;
+
+    border: 1px solid #eaded3;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    text-align: left;
+}
+
+
+.order-details h2,
+.ordered-items h2,
+.delivery-address h2 {
+
+    font-size: 19px;
+
+    color: #3f281c;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   DETAIL ROW
+========================================================= */
+
+.detail-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #eee5de;
+}
+
+
+.detail-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.detail-row span {
+
+    color: #765d4d;
+
+    font-size: 14px;
+}
+
+
+.detail-row strong {
+
+    color: #3f281c;
+
+    font-size: 15px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   TOTAL ROW
+========================================================= */
+
+.total-row {
+
+    margin-top: 5px;
+
+    padding-top: 18px;
+}
+
+
+.total-row span {
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #3f281c;
+}
+
+
+.total-row strong {
+
+    font-size: 21px;
+
+    color: #4a2d1e;
+}
+
+
+/* =========================================================
+   ORDERED ITEMS
+========================================================= */
+
+#orderedItems {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.success-order-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 13px;
+
+    border: 1px solid #eee5de;
+
+    border-radius: 9px;
+
+    background: #faf6ef;
+}
+
+
+.success-order-item-image {
+
+    width: 62px;
+
+    height: 62px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    background: #eee5de;
+
+    flex-shrink: 0;
+}
+
+
+.success-order-item-info {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.success-order-item-name {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #3f281c;
+
+    margin-bottom: 5px;
+}
+
+
+.success-order-item-quantity {
+
+    font-size: 13px;
+
+    color: #765d4d;
+}
+
+
+.success-order-item-price {
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: #4a2d1e;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   DELIVERY ADDRESS
+========================================================= */
+
+.delivery-address p {
+
+    color: #765d4d;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    white-space: pre-line;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.success-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+    flex-wrap: wrap;
+}
+
+
+.success-buttons a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 190px;
+
+    padding: 15px 24px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   CONTINUE SHOPPING
+========================================================= */
+
+.continue-shopping-btn {
+
+    background: #4a2d1e;
+
+    color: #ffffff;
+}
+
+
+.continue-shopping-btn:hover {
+
+    background: #69432d;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HOME BUTTON
+========================================================= */
+
+.home-btn {
+
+    background: #faf6ef;
+
+    color: #4a2d1e;
+
+    border: 1px solid #d9c9bc;
+}
+
+
+.home-btn:hover {
+
+    background: #eee3d9;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .order-success-page {
+
+        padding: 30px 14px;
+    }
+
+
+    .order-success-container {
+
+        padding: 38px 20px;
+
+        border-radius: 14px;
+    }
+
+
+    .order-success-container h1 {
+
+        font-size: 28px;
+    }
+
+
+    .success-message {
+
+        font-size: 14px;
+    }
+
+
+    .order-id-box {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 7px;
+    }
+
+
+    .order-details,
+    .ordered-items,
+    .delivery-address {
+
+        padding: 20px;
+    }
+
+
+    .detail-row {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 6px;
+    }
+
+
+    .detail-row strong {
+
+        text-align: left;
+    }
+
+
+    .success-order-item-price {
+
+        font-size: 14px;
+    }
+
+
+    .success-buttons {
+
+        flex-direction: column;
+    }
+
+
+    .success-buttons a {
+
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .order-success-container {
+
+        padding: 30px 16px;
+    }
+
+
+    .success-icon {
+
+        width: 68px;
+
+        height: 68px;
+
+        font-size: 36px;
+    }
+
+
+    .order-success-container h1 {
+
+        font-size: 24px;
+    }
+
+
+    .success-small-title {
+
+        font-size: 10px;
+
+        letter-spacing: 1.8px;
+    }
+
+
+    .success-order-item-image {
+
+        width: 52px;
+
+        height: 52px;
+    }
+
+}
